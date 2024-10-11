@@ -1,0 +1,383 @@
+        -:    0:Source:/home/dstrunetss/Desktop/PPOIS/sem_1/lab_2/Testing/ClientTest.cpp
+        -:    0:Graph:/home/dstrunetss/Desktop/PPOIS/sem_1/lab_2/cmake-build-debug-coverage/CMakeFiles/lab_2.dir/Testing/ClientTest.cpp.gcno
+        -:    0:Data:/home/dstrunetss/Desktop/PPOIS/sem_1/lab_2/cmake-build-debug-coverage/CMakeFiles/lab_2.dir/Testing/ClientTest.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "../cmake-build-debug/Client.h"
+        -:    2:#include "gtest/gtest.h"
+        -:    3:
+        -:    4:
+        -:    5:class ClientTest : public ::testing::Test {
+        -:    6:protected:
+        -:    7:    Client* client;
+        -:    8:
+function _ZN10ClientTest5SetUpEv called 3 returned 100% blocks executed 49%
+        3:    9:    void SetUp() override {
+        -:   10:        // Инициализируем экземпляр Client с начальными параметрами
+       18:   11:        client = new Client("Alice", "alice@example.com", "securePassword123");
+        3:   11-block  0
+call    0 returned 3
+        3:   11-block  1
+call    1 returned 3
+branch  2 taken 3 (fallthrough)
+branch  3 taken 0 (throw)
+        3:   11-block  2
+call    4 returned 3
+branch  5 taken 3 (fallthrough)
+branch  6 taken 0 (throw)
+        3:   11-block  3
+call    7 returned 3
+branch  8 taken 3 (fallthrough)
+branch  9 taken 0 (throw)
+        3:   11-block  4
+call   10 returned 3
+branch 11 taken 3 (fallthrough)
+branch 12 taken 0 (throw)
+        3:   11-block  5
+call   13 returned 3
+        3:   11-block  6
+call   14 returned 3
+        3:   11-block  7
+call   15 returned 3
+    $$$$$:   11-block  8
+call   16 never executed
+    $$$$$:   11-block  9
+    $$$$$:   11-block 10
+    $$$$$:   11-block 11
+call   17 never executed
+    $$$$$:   11-block 12
+    $$$$$:   11-block 13
+    $$$$$:   11-block 14
+call   18 never executed
+    $$$$$:   11-block 15
+    $$$$$:   11-block 16
+    $$$$$:   11-block 17
+branch 19 never executed (fallthrough)
+branch 20 never executed
+    $$$$$:   11-block 18
+call   21 never executed
+        3:   12:    }
+        3:   12-block  0
+        -:   13:
+function _ZN10ClientTest8TearDownEv called 3 returned 100% blocks executed 100%
+        3:   14:    void TearDown() override {
+        3:   15:        delete client; // Освобождаем память
+        3:   15-block  0
+branch  0 taken 3 (fallthrough)
+branch  1 taken 0
+        3:   15-block  1
+call    2 returned 3
+        3:   16:    }
+        -:   17:};
+        -:   18:
+        -:   19:// Тест на получение email
+        4:   20:TEST_F(ClientTest, GetEmail) {
+       1*:   21:    EXPECT_EQ(client->getEmail(), "alice@example.com"); // Проверка, что email соответствует ожидаемому значению
+        1:   22:}
+------------------
+_ZN24ClientTest_GetEmail_TestC2Ev:
+function _ZN24ClientTest_GetEmail_TestC2Ev called 1 returned 100% blocks executed 100%
+        1:   20:TEST_F(ClientTest, GetEmail) {
+        1:   20-block  0
+call    0 returned 1
+------------------
+_ZN24ClientTest_GetEmail_TestD0Ev:
+function _ZN24ClientTest_GetEmail_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:   20:TEST_F(ClientTest, GetEmail) {
+        1:   20-block  0
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN24ClientTest_GetEmail_TestD2Ev:
+function _ZN24ClientTest_GetEmail_TestD2Ev called 1 returned 100% blocks executed 100%
+        1:   20:TEST_F(ClientTest, GetEmail) {
+        1:   20-block  0
+call    0 returned 1
+------------------
+_ZN24ClientTest_GetEmail_Test8TestBodyEv:
+function _ZN24ClientTest_GetEmail_Test8TestBodyEv called 1 returned 100% blocks executed 31%
+        1:   20:TEST_F(ClientTest, GetEmail) {
+       1*:   21:    EXPECT_EQ(client->getEmail(), "alice@example.com"); // Проверка, что email соответствует ожидаемому значению
+        1:   21-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   21-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   21-block  2
+call    6 returned 1
+call    7 returned 1
+branch  8 taken 0 (fallthrough)
+branch  9 taken 1
+    %%%%%:   21-block  3
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:   21-block  4
+call   13 never executed
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
+    %%%%%:   21-block  5
+call   17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed (throw)
+    %%%%%:   21-block  6
+call   20 never executed
+call   21 never executed
+        1:   21-block  7
+call   22 returned 1
+    $$$$$:   21-block  8
+call   23 never executed
+    $$$$$:   21-block  9
+    $$$$$:   21-block 10
+call   24 never executed
+    $$$$$:   21-block 11
+    $$$$$:   21-block 12
+call   25 never executed
+    $$$$$:   21-block 13
+    $$$$$:   21-block 14
+call   26 never executed
+        1:   22:}
+------------------
+        -:   23:
+        -:   24:// Тест на получение пароля
+        4:   25:TEST_F(ClientTest, GetPassword) {
+       1*:   26:    EXPECT_EQ(client->getPassword(), "securePassword123"); // Проверка, что пароль соответствует ожидаемому
+        1:   27:}
+------------------
+_ZN27ClientTest_GetPassword_TestC2Ev:
+function _ZN27ClientTest_GetPassword_TestC2Ev called 1 returned 100% blocks executed 100%
+        1:   25:TEST_F(ClientTest, GetPassword) {
+        1:   25-block  0
+call    0 returned 1
+------------------
+_ZN27ClientTest_GetPassword_TestD0Ev:
+function _ZN27ClientTest_GetPassword_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:   25:TEST_F(ClientTest, GetPassword) {
+        1:   25-block  0
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN27ClientTest_GetPassword_TestD2Ev:
+function _ZN27ClientTest_GetPassword_TestD2Ev called 1 returned 100% blocks executed 100%
+        1:   25:TEST_F(ClientTest, GetPassword) {
+        1:   25-block  0
+call    0 returned 1
+------------------
+_ZN27ClientTest_GetPassword_Test8TestBodyEv:
+function _ZN27ClientTest_GetPassword_Test8TestBodyEv called 1 returned 100% blocks executed 31%
+        1:   25:TEST_F(ClientTest, GetPassword) {
+       1*:   26:    EXPECT_EQ(client->getPassword(), "securePassword123"); // Проверка, что пароль соответствует ожидаемому
+        1:   26-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   26-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   26-block  2
+call    6 returned 1
+call    7 returned 1
+branch  8 taken 0 (fallthrough)
+branch  9 taken 1
+    %%%%%:   26-block  3
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:   26-block  4
+call   13 never executed
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
+    %%%%%:   26-block  5
+call   17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed (throw)
+    %%%%%:   26-block  6
+call   20 never executed
+call   21 never executed
+        1:   26-block  7
+call   22 returned 1
+    $$$$$:   26-block  8
+call   23 never executed
+    $$$$$:   26-block  9
+    $$$$$:   26-block 10
+call   24 never executed
+    $$$$$:   26-block 11
+    $$$$$:   26-block 12
+call   25 never executed
+    $$$$$:   26-block 13
+    $$$$$:   26-block 14
+call   26 never executed
+        1:   27:}
+------------------
+        -:   28:
+        -:   29:
+        -:   30:
+        -:   31:
+        -:   32:// Тест на отображение информации (можно использовать вывод в поток, но это не проверка на корректность)
+        4:   33:TEST_F(ClientTest, ShowInfo) {
+        1:   34:    testing::internal::CaptureStdout(); // Захват стандартного вывода
+        1:   35:    client->showInfo(); // Вызов метода, который выводит информацию
+        1:   36:    std::string output = testing::internal::GetCapturedStdout(); // Получение захваченного вывода
+        -:   37:
+       1*:   38:    EXPECT_NE(output.find("Name: Alice"), std::string::npos); // Проверка, что имя есть в выводе
+       1*:   39:    EXPECT_NE(output.find("Email: alice@example.com"), std::string::npos); // Проверка, что email есть в выводе
+       1*:   40:    EXPECT_NE(output.find("Password: securePassword123"), std::string::npos); // Проверка, что пароль есть в выводе
+        1:   41:}
+------------------
+_ZN24ClientTest_ShowInfo_TestC2Ev:
+function _ZN24ClientTest_ShowInfo_TestC2Ev called 1 returned 100% blocks executed 100%
+        1:   33:TEST_F(ClientTest, ShowInfo) {
+        1:   33-block  0
+call    0 returned 1
+------------------
+_ZN24ClientTest_ShowInfo_TestD0Ev:
+function _ZN24ClientTest_ShowInfo_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:   33:TEST_F(ClientTest, ShowInfo) {
+        1:   33-block  0
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN24ClientTest_ShowInfo_TestD2Ev:
+function _ZN24ClientTest_ShowInfo_TestD2Ev called 1 returned 100% blocks executed 100%
+        1:   33:TEST_F(ClientTest, ShowInfo) {
+        1:   33-block  0
+call    0 returned 1
+------------------
+_ZN24ClientTest_ShowInfo_Test8TestBodyEv:
+function _ZN24ClientTest_ShowInfo_Test8TestBodyEv called 1 returned 100% blocks executed 28%
+        1:   33:TEST_F(ClientTest, ShowInfo) {
+        1:   34:    testing::internal::CaptureStdout(); // Захват стандартного вывода
+        1:   34-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   35:    client->showInfo(); // Вызов метода, который выводит информацию
+        1:   35-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   36:    std::string output = testing::internal::GetCapturedStdout(); // Получение захваченного вывода
+        1:   36-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   37:
+       1*:   38:    EXPECT_NE(output.find("Name: Alice"), std::string::npos); // Проверка, что имя есть в выводе
+        1:   38-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   38-block  1
+call    4 returned 1
+branch  5 taken 0 (fallthrough)
+branch  6 taken 1
+    %%%%%:   38-block  2
+call    7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed (throw)
+    %%%%%:   38-block  3
+call   10 never executed
+call   11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed (throw)
+    %%%%%:   38-block  4
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
+    %%%%%:   38-block  5
+call   17 never executed
+call   18 never executed
+        1:   38-block  6
+call   19 returned 1
+    $$$$$:   38-block  7
+    $$$$$:   38-block  8
+call   20 never executed
+    $$$$$:   38-block  9
+    $$$$$:   38-block 10
+call   21 never executed
+    $$$$$:   38-block 11
+    $$$$$:   38-block 12
+call   22 never executed
+       1*:   39:    EXPECT_NE(output.find("Email: alice@example.com"), std::string::npos); // Проверка, что email есть в выводе
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   39-block  0
+call    4 returned 1
+branch  5 taken 0 (fallthrough)
+branch  6 taken 1
+    %%%%%:   39-block  1
+call    7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed (throw)
+    %%%%%:   39-block  2
+call   10 never executed
+call   11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed (throw)
+    %%%%%:   39-block  3
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
+    %%%%%:   39-block  4
+call   17 never executed
+call   18 never executed
+        1:   39-block  5
+call   19 returned 1
+    $$$$$:   39-block  6
+    $$$$$:   39-block  7
+call   20 never executed
+    $$$$$:   39-block  8
+    $$$$$:   39-block  9
+call   21 never executed
+    $$$$$:   39-block 10
+    $$$$$:   39-block 11
+call   22 never executed
+       1*:   40:    EXPECT_NE(output.find("Password: securePassword123"), std::string::npos); // Проверка, что пароль есть в выводе
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   40-block  0
+call    4 returned 1
+branch  5 taken 0 (fallthrough)
+branch  6 taken 1
+    %%%%%:   40-block  1
+call    7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed (throw)
+    %%%%%:   40-block  2
+call   10 never executed
+call   11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed (throw)
+    %%%%%:   40-block  3
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
+    %%%%%:   40-block  4
+call   17 never executed
+call   18 never executed
+        1:   40-block  5
+call   19 returned 1
+    $$$$$:   40-block  6
+    $$$$$:   40-block  7
+call   20 never executed
+    $$$$$:   40-block  8
+    $$$$$:   40-block  9
+call   21 never executed
+    $$$$$:   40-block 10
+    $$$$$:   40-block 11
+call   22 never executed
+        1:   41:}
+call    0 returned 1
+    $$$$$:   41-block  0
+call    1 never executed
+------------------

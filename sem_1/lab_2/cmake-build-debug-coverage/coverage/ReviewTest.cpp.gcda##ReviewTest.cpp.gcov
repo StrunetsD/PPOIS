@@ -1,0 +1,395 @@
+        -:    0:Source:/home/dstrunetss/Desktop/PPOIS/sem_1/lab_2/Testing/ReviewTest.cpp
+        -:    0:Graph:/home/dstrunetss/Desktop/PPOIS/sem_1/lab_2/cmake-build-debug-coverage/CMakeFiles/lab_2.dir/Testing/ReviewTest.cpp.gcno
+        -:    0:Data:/home/dstrunetss/Desktop/PPOIS/sem_1/lab_2/cmake-build-debug-coverage/CMakeFiles/lab_2.dir/Testing/ReviewTest.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include <gtest/gtest.h>
+        -:    2:#include "../cmake-build-debug/Review.h"
+        -:    3:
+        -:    4:class ReviewTest : public ::testing::Test {
+        -:    5:protected:
+        -:    6:    Client* client = new Client("John Doe","@example.com","1111");
+        -:    7:    Review* review = new Review(client,"Excellent service!",5);
+        -:    8:};
+        -:    9:
+        -:   10:
+        4:   11:TEST_F(ReviewTest, GetClientName) {
+       1*:   12:    EXPECT_EQ(review->getClientName(), "John Doe");
+        1:   13:}
+------------------
+_ZN29ReviewTest_GetClientName_TestC2Ev:
+function _ZN29ReviewTest_GetClientName_TestC2Ev called 1 returned 100% blocks executed 100%
+        1:   11:TEST_F(ReviewTest, GetClientName) {
+        1:   11-block  0
+call    0 returned 1
+------------------
+_ZN29ReviewTest_GetClientName_TestD0Ev:
+function _ZN29ReviewTest_GetClientName_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:   11:TEST_F(ReviewTest, GetClientName) {
+        1:   11-block  0
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN29ReviewTest_GetClientName_TestD2Ev:
+function _ZN29ReviewTest_GetClientName_TestD2Ev called 1 returned 100% blocks executed 100%
+        1:   11:TEST_F(ReviewTest, GetClientName) {
+        1:   11-block  0
+call    0 returned 1
+------------------
+_ZN29ReviewTest_GetClientName_Test8TestBodyEv:
+function _ZN29ReviewTest_GetClientName_Test8TestBodyEv called 1 returned 100% blocks executed 31%
+        1:   11:TEST_F(ReviewTest, GetClientName) {
+       1*:   12:    EXPECT_EQ(review->getClientName(), "John Doe");
+        1:   12-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   12-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   12-block  2
+call    6 returned 1
+call    7 returned 1
+branch  8 taken 0 (fallthrough)
+branch  9 taken 1
+    %%%%%:   12-block  3
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:   12-block  4
+call   13 never executed
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
+    %%%%%:   12-block  5
+call   17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed (throw)
+    %%%%%:   12-block  6
+call   20 never executed
+call   21 never executed
+        1:   12-block  7
+call   22 returned 1
+    $$$$$:   12-block  8
+call   23 never executed
+    $$$$$:   12-block  9
+    $$$$$:   12-block 10
+call   24 never executed
+    $$$$$:   12-block 11
+    $$$$$:   12-block 12
+call   25 never executed
+    $$$$$:   12-block 13
+    $$$$$:   12-block 14
+call   26 never executed
+        1:   13:}
+------------------
+        -:   14:
+        -:   15:
+        4:   16:TEST_F(ReviewTest, GetContent) {
+       1*:   17:    EXPECT_EQ(review->getContent(), "Excellent service!");
+        1:   18:}
+------------------
+_ZN26ReviewTest_GetContent_TestC2Ev:
+function _ZN26ReviewTest_GetContent_TestC2Ev called 1 returned 100% blocks executed 100%
+        1:   16:TEST_F(ReviewTest, GetContent) {
+        1:   16-block  0
+call    0 returned 1
+------------------
+_ZN26ReviewTest_GetContent_TestD0Ev:
+function _ZN26ReviewTest_GetContent_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:   16:TEST_F(ReviewTest, GetContent) {
+        1:   16-block  0
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN26ReviewTest_GetContent_TestD2Ev:
+function _ZN26ReviewTest_GetContent_TestD2Ev called 1 returned 100% blocks executed 100%
+        1:   16:TEST_F(ReviewTest, GetContent) {
+        1:   16-block  0
+call    0 returned 1
+------------------
+_ZN26ReviewTest_GetContent_Test8TestBodyEv:
+function _ZN26ReviewTest_GetContent_Test8TestBodyEv called 1 returned 100% blocks executed 31%
+        1:   16:TEST_F(ReviewTest, GetContent) {
+       1*:   17:    EXPECT_EQ(review->getContent(), "Excellent service!");
+        1:   17-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   17-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   17-block  2
+call    6 returned 1
+call    7 returned 1
+branch  8 taken 0 (fallthrough)
+branch  9 taken 1
+    %%%%%:   17-block  3
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:   17-block  4
+call   13 never executed
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
+    %%%%%:   17-block  5
+call   17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed (throw)
+    %%%%%:   17-block  6
+call   20 never executed
+call   21 never executed
+        1:   17-block  7
+call   22 returned 1
+    $$$$$:   17-block  8
+call   23 never executed
+    $$$$$:   17-block  9
+    $$$$$:   17-block 10
+call   24 never executed
+    $$$$$:   17-block 11
+    $$$$$:   17-block 12
+call   25 never executed
+    $$$$$:   17-block 13
+    $$$$$:   17-block 14
+call   26 never executed
+        1:   18:}
+------------------
+        -:   19:
+        -:   20:
+        4:   21:TEST_F(ReviewTest, GetRating) {
+       1*:   22:    EXPECT_EQ(review->getRating(), 5);
+        1:   23:}
+------------------
+_ZN25ReviewTest_GetRating_TestC2Ev:
+function _ZN25ReviewTest_GetRating_TestC2Ev called 1 returned 100% blocks executed 100%
+        1:   21:TEST_F(ReviewTest, GetRating) {
+        1:   21-block  0
+call    0 returned 1
+------------------
+_ZN25ReviewTest_GetRating_TestD0Ev:
+function _ZN25ReviewTest_GetRating_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:   21:TEST_F(ReviewTest, GetRating) {
+        1:   21-block  0
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN25ReviewTest_GetRating_TestD2Ev:
+function _ZN25ReviewTest_GetRating_TestD2Ev called 1 returned 100% blocks executed 100%
+        1:   21:TEST_F(ReviewTest, GetRating) {
+        1:   21-block  0
+call    0 returned 1
+------------------
+_ZN25ReviewTest_GetRating_Test8TestBodyEv:
+function _ZN25ReviewTest_GetRating_Test8TestBodyEv called 1 returned 100% blocks executed 29%
+        1:   21:TEST_F(ReviewTest, GetRating) {
+       1*:   22:    EXPECT_EQ(review->getRating(), 5);
+        1:   22-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   22-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   22-block  2
+call    6 returned 1
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:   22-block  3
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%:   22-block  4
+call   12 never executed
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:   22-block  5
+call   16 never executed
+branch 17 never executed (fallthrough)
+branch 18 never executed (throw)
+    %%%%%:   22-block  6
+call   19 never executed
+call   20 never executed
+        1:   22-block  7
+call   21 returned 1
+    $$$$$:   22-block  8
+    $$$$$:   22-block  9
+    $$$$$:   22-block 10
+call   22 never executed
+    $$$$$:   22-block 11
+    $$$$$:   22-block 12
+call   23 never executed
+    $$$$$:   22-block 13
+    $$$$$:   22-block 14
+call   24 never executed
+        1:   23:}
+------------------
+        -:   24:
+        -:   25:
+        4:   26:TEST_F(ReviewTest, ShowInfo) {
+        1:   27:    testing::internal::CaptureStdout();
+        1:   28:    review->showInfo();
+        1:   29:    std::string output = testing::internal::GetCapturedStdout();
+       1*:   30:    EXPECT_NE(output.find("Review by: John Doe"), std::string::npos);
+       1*:   31:    EXPECT_NE(output.find("Rating: 5/5"), std::string::npos);
+       1*:   32:    EXPECT_NE(output.find("Comment: Excellent service!"), std::string::npos);
+        1:   33:}
+------------------
+_ZN24ReviewTest_ShowInfo_TestC2Ev:
+function _ZN24ReviewTest_ShowInfo_TestC2Ev called 1 returned 100% blocks executed 100%
+        1:   26:TEST_F(ReviewTest, ShowInfo) {
+        1:   26-block  0
+call    0 returned 1
+------------------
+_ZN24ReviewTest_ShowInfo_TestD0Ev:
+function _ZN24ReviewTest_ShowInfo_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:   26:TEST_F(ReviewTest, ShowInfo) {
+        1:   26-block  0
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN24ReviewTest_ShowInfo_TestD2Ev:
+function _ZN24ReviewTest_ShowInfo_TestD2Ev called 1 returned 100% blocks executed 100%
+        1:   26:TEST_F(ReviewTest, ShowInfo) {
+        1:   26-block  0
+call    0 returned 1
+------------------
+_ZN24ReviewTest_ShowInfo_Test8TestBodyEv:
+function _ZN24ReviewTest_ShowInfo_Test8TestBodyEv called 1 returned 100% blocks executed 28%
+        1:   26:TEST_F(ReviewTest, ShowInfo) {
+        1:   27:    testing::internal::CaptureStdout();
+        1:   27-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   28:    review->showInfo();
+        1:   28-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   29:    std::string output = testing::internal::GetCapturedStdout();
+        1:   29-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   30:    EXPECT_NE(output.find("Review by: John Doe"), std::string::npos);
+        1:   30-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   30-block  1
+call    4 returned 1
+branch  5 taken 0 (fallthrough)
+branch  6 taken 1
+    %%%%%:   30-block  2
+call    7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed (throw)
+    %%%%%:   30-block  3
+call   10 never executed
+call   11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed (throw)
+    %%%%%:   30-block  4
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
+    %%%%%:   30-block  5
+call   17 never executed
+call   18 never executed
+        1:   30-block  6
+call   19 returned 1
+    $$$$$:   30-block  7
+    $$$$$:   30-block  8
+call   20 never executed
+    $$$$$:   30-block  9
+    $$$$$:   30-block 10
+call   21 never executed
+    $$$$$:   30-block 11
+    $$$$$:   30-block 12
+call   22 never executed
+       1*:   31:    EXPECT_NE(output.find("Rating: 5/5"), std::string::npos);
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   31-block  0
+call    4 returned 1
+branch  5 taken 0 (fallthrough)
+branch  6 taken 1
+    %%%%%:   31-block  1
+call    7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed (throw)
+    %%%%%:   31-block  2
+call   10 never executed
+call   11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed (throw)
+    %%%%%:   31-block  3
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
+    %%%%%:   31-block  4
+call   17 never executed
+call   18 never executed
+        1:   31-block  5
+call   19 returned 1
+    $$$$$:   31-block  6
+    $$$$$:   31-block  7
+call   20 never executed
+    $$$$$:   31-block  8
+    $$$$$:   31-block  9
+call   21 never executed
+    $$$$$:   31-block 10
+    $$$$$:   31-block 11
+call   22 never executed
+       1*:   32:    EXPECT_NE(output.find("Comment: Excellent service!"), std::string::npos);
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   32-block  0
+call    4 returned 1
+branch  5 taken 0 (fallthrough)
+branch  6 taken 1
+    %%%%%:   32-block  1
+call    7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed (throw)
+    %%%%%:   32-block  2
+call   10 never executed
+call   11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed (throw)
+    %%%%%:   32-block  3
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
+    %%%%%:   32-block  4
+call   17 never executed
+call   18 never executed
+        1:   32-block  5
+call   19 returned 1
+    $$$$$:   32-block  6
+    $$$$$:   32-block  7
+call   20 never executed
+    $$$$$:   32-block  8
+    $$$$$:   32-block  9
+call   21 never executed
+    $$$$$:   32-block 10
+    $$$$$:   32-block 11
+call   22 never executed
+        1:   33:}
+call    0 returned 1
+    $$$$$:   33-block  0
+call    1 never executed
+------------------
+        -:   34:
+        -:   35:
+        -:   36:
+        -:   37:

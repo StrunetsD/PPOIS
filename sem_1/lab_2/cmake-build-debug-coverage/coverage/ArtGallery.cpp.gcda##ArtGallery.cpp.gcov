@@ -1,0 +1,235 @@
+        -:    0:Source:/home/dstrunetss/Desktop/PPOIS/sem_1/lab_2/cmake-build-debug/ArtGallery.cpp
+        -:    0:Graph:/home/dstrunetss/Desktop/PPOIS/sem_1/lab_2/cmake-build-debug-coverage/CMakeFiles/lab_2.dir/cmake-build-debug/ArtGallery.cpp.gcno
+        -:    0:Data:/home/dstrunetss/Desktop/PPOIS/sem_1/lab_2/cmake-build-debug-coverage/CMakeFiles/lab_2.dir/cmake-build-debug/ArtGallery.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "ArtGallery.h"
+        -:    2:
+function _ZNK10ArtGallery7getNameB5cxx11Ev called 0 returned 0% blocks executed 0%
+    #####:    3:string ArtGallery::getName() const {
+    #####:    4:    return name_;
+    %%%%%:    4-block  0
+call    0 never executed
+        -:    5:}
+        -:    6:
+function _ZN10ArtGallery9addArtistEP6Artist called 4 returned 100% blocks executed 100%
+        4:    7:void ArtGallery::addArtist(Artist* artist) {
+        4:    8:    artists_.push_back(artist);
+        4:    8-block  0
+call    0 returned 4
+        4:    9:}
+        -:   10:
+function _ZN10ArtGallery11addPaintingEP8Painting called 5 returned 100% blocks executed 100%
+        5:   11:void ArtGallery::addPainting(Painting* painting) {
+        5:   12:    paintings_.push_back(painting);
+        5:   12-block  0
+call    0 returned 5
+        5:   13:}
+        -:   14:
+function _ZN10ArtGallery9addClientEP6Client called 2 returned 100% blocks executed 100%
+        2:   15:void ArtGallery::addClient(Client* client) {
+        2:   16:    clients_.push_back(client);
+        2:   16-block  0
+call    0 returned 2
+        2:   17:}
+        -:   18:
+function _ZN10ArtGallery9addReviewEP6Review called 3 returned 100% blocks executed 100%
+        3:   19:void ArtGallery::addReview(Review* review) {
+        3:   20:    reviews_.push_back(review);
+        3:   20-block  0
+call    0 returned 3
+        3:   21:}
+        -:   22:
+function _ZN10ArtGallery8addEventEP5Event called 2 returned 100% blocks executed 100%
+        2:   23:void ArtGallery::addEvent(Event* event) {
+        2:   24:    events_.push_back(event);
+        2:   24-block  0
+call    0 returned 2
+        2:   25:}
+        -:   26:
+function _ZNK10ArtGallery8showInfoEv called 14 returned 100% blocks executed 95%
+       14:   27:void ArtGallery::showInfo() const {
+       14:   28:    cout << "Artists: " << endl;
+       14:   28-block  0
+call    0 returned 14
+call    1 returned 14
+       14:   29:    if (artists_.empty()) {
+call    0 returned 14
+branch  1 taken 11 (fallthrough)
+branch  2 taken 3
+       11:   30:        cout << "None." << endl;
+       11:   30-block  0
+call    0 returned 11
+call    1 returned 11
+        -:   31:    } else {
+        7:   32:        for (const auto& artist : artists_) {
+        3:   32-block  0
+call    0 returned 3
+call    1 returned 3
+        4:   32-block  1
+call    2 returned 4
+        4:   32-block  2
+call    3 returned 4
+        7:   32-block  3
+call    4 returned 7
+branch  5 taken 4
+branch  6 taken 3 (fallthrough)
+        4:   33:            artist->showInfo();
+call    0 returned 4
+branch  1 taken 4 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   34:        }
+        -:   35:    }
+        -:   36:
+       14:   37:    cout << "Paintings: " << endl;
+       14:   37-block  0
+call    0 returned 14
+call    1 returned 14
+       14:   38:    if (paintings_.empty()) {
+call    0 returned 14
+branch  1 taken 10 (fallthrough)
+branch  2 taken 4
+       10:   39:        cout << "None." << endl;
+       10:   39-block  0
+call    0 returned 10
+call    1 returned 10
+        -:   40:    } else {
+        9:   41:        for (const auto& painting : paintings_) {
+        4:   41-block  0
+call    0 returned 4
+call    1 returned 4
+        5:   41-block  1
+call    2 returned 5
+        5:   41-block  2
+call    3 returned 5
+        9:   41-block  3
+call    4 returned 9
+branch  5 taken 5
+branch  6 taken 4 (fallthrough)
+        5:   42:            painting->showInfo();
+call    0 returned 5
+branch  1 taken 5 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   43:        }
+        -:   44:    }
+        -:   45:
+       14:   46:    cout << "Clients: " << endl;
+       14:   46-block  0
+call    0 returned 14
+call    1 returned 14
+       14:   47:    if (clients_.empty()) {
+call    0 returned 14
+branch  1 taken 12 (fallthrough)
+branch  2 taken 2
+       12:   48:        cout << "None." << endl;
+       12:   48-block  0
+call    0 returned 12
+call    1 returned 12
+        -:   49:    } else {
+        4:   50:        for (const auto& client : clients_) {
+        2:   50-block  0
+call    0 returned 2
+call    1 returned 2
+        2:   50-block  1
+call    2 returned 2
+        2:   50-block  2
+call    3 returned 2
+        4:   50-block  3
+call    4 returned 4
+branch  5 taken 2
+branch  6 taken 2 (fallthrough)
+        2:   51:            client->showInfo();
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   52:        }
+        -:   53:    }
+        -:   54:
+       14:   55:    cout << "Events: " << endl;
+       14:   55-block  0
+call    0 returned 14
+call    1 returned 14
+       14:   56:    if (events_.empty()) {
+call    0 returned 14
+branch  1 taken 12 (fallthrough)
+branch  2 taken 2
+       12:   57:        cout << "None." << endl;
+       12:   57-block  0
+call    0 returned 12
+call    1 returned 12
+        -:   58:    } else {
+        4:   59:        for (const auto& event : events_) {
+        2:   59-block  0
+call    0 returned 2
+call    1 returned 2
+        2:   59-block  1
+call    2 returned 2
+        2:   59-block  2
+call    3 returned 2
+        4:   59-block  3
+call    4 returned 4
+branch  5 taken 2
+branch  6 taken 2 (fallthrough)
+        2:   60:            event->showInfo();
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   61:        }
+        -:   62:    }
+        -:   63:
+       14:   64:    cout << "Reviews: " << endl;
+       14:   64-block  0
+call    0 returned 14
+call    1 returned 14
+       14:   65:    if (reviews_.empty()) {
+call    0 returned 14
+branch  1 taken 11 (fallthrough)
+branch  2 taken 3
+       11:   66:        cout << "None." << endl;
+       11:   66-block  0
+call    0 returned 11
+call    1 returned 11
+        -:   67:    } else {
+        6:   68:        for (const auto& review : reviews_) {
+        3:   68-block  0
+call    0 returned 3
+call    1 returned 3
+        3:   68-block  1
+call    2 returned 3
+        3:   68-block  2
+call    3 returned 3
+        6:   68-block  3
+call    4 returned 6
+branch  5 taken 3
+branch  6 taken 3 (fallthrough)
+        3:   69:            review->showInfo();
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   70:        }
+        -:   71:    }
+       14:   72:}
+       14:   72-block  0
+        -:   73:
+function _ZNK10ArtGallery11showWorkersEP7Workers called 1 returned 100% blocks executed 78%
+        1:   74:void ArtGallery::showWorkers(Workers* workers) const {
+        1:   75:    cout << "Workers: " << endl;
+        1:   75-block  0
+call    0 returned 1
+call    1 returned 1
+        1:   76:    if (workers) {
+branch  0 taken 1 (fallthrough)
+branch  1 taken 0
+        1:   77:        workers->showAdministrators();
+        1:   77-block  0
+call    0 returned 1
+        1:   78:        workers->showCurators();
+call    0 returned 1
+        1:   79:        workers->showSecurity();
+call    0 returned 1
+        -:   80:    } else {
+    #####:   81:        cout << "None." << endl;
+    %%%%%:   81-block  0
+call    0 never executed
+call    1 never executed
+        -:   82:    }
+        1:   83:}

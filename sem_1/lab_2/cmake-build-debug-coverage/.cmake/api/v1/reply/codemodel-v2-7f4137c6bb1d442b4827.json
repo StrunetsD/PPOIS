@@ -1,0 +1,177 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.29"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "lab_2",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "AdministratorTest::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-AdministratorTest-Debug-0c92bcdbc3235c4862b5.json",
+					"name" : "AdministratorTest",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ArtGalleryTest::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ArtGalleryTest-Debug-6857b98b48e63c5290cb.json",
+					"name" : "ArtGalleryTest",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ArtistTest::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ArtistTest-Debug-fe02156860c58b17827d.json",
+					"name" : "ArtistTest",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "BankTest::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-BankTest-Debug-27cc18c0b8901451bc87.json",
+					"name" : "BankTest",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "CategoryTest::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-CategoryTest-Debug-7099c0df87d662378cf0.json",
+					"name" : "CategoryTest",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ClientTest::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ClientTest-Debug-be9221164d1787d6627b.json",
+					"name" : "ClientTest",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "CuratorTest::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-CuratorTest-Debug-fcdbf211f245bb5b6df2.json",
+					"name" : "CuratorTest",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "EventTest::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-EventTest-Debug-7a261a9321c8a51f5a67.json",
+					"name" : "EventTest",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "PaintingTest::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-PaintingTest-Debug-043aa42acb4148b10251.json",
+					"name" : "PaintingTest",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ReviewTest::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ReviewTest-Debug-c614f4dd3563c908d996.json",
+					"name" : "ReviewTest",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "SecurityTest::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-SecurityTest-Debug-0e00632897132b444594.json",
+					"name" : "SecurityTest",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "TransactionTest::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-TransactionTest-Debug-0ea33c30cd182e9be68f.json",
+					"name" : "TransactionTest",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "WorkersTest::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-WorkersTest-Debug-a6d4cc2ff2216e72cc70.json",
+					"name" : "WorkersTest",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "lab_2::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-lab_2-Debug-3bf8fddd9a8fc7b898b2.json",
+					"name" : "lab_2",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/dstrunetss/Desktop/PPOIS/sem_1/lab_2/cmake-build-debug-coverage",
+		"source" : "/home/dstrunetss/Desktop/PPOIS/sem_1/lab_2"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

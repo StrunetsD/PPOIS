@@ -1,0 +1,45 @@
+        -:    0:Source:/home/dstrunetss/Desktop/PPOIS/sem_1/lab_2/cmake-build-debug/Employee.h
+        -:    0:Graph:/home/dstrunetss/Desktop/PPOIS/sem_1/lab_2/cmake-build-debug-coverage/CMakeFiles/lab_2.dir/Testing/SecurityTest.cpp.gcno
+        -:    0:Data:/home/dstrunetss/Desktop/PPOIS/sem_1/lab_2/cmake-build-debug-coverage/CMakeFiles/lab_2.dir/Testing/SecurityTest.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#ifndef EMPLOYEE_H
+        -:    2:#define EMPLOYEE_H
+        -:    3:#include "libraries.h"
+        -:    4:
+        -:    5:
+        -:    6:class Employee {
+        -:    7:public:
+function _ZN8EmployeeC2ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 0 returned 0% blocks executed 0%
+    #####:    8:  explicit Employee(const string arriveTime) : arriveTime(arriveTime) {}
+    %%%%%:    8-block  0
+call    0 never executed
+function _ZNK8Employee13getArriveTimeB5cxx11Ev called 0 returned 0% blocks executed 0%
+    #####:    9:  virtual string getArriveTime() const {
+    #####:   10:    return arriveTime;
+    %%%%%:   10-block  0
+call    0 never executed
+        -:   11:  }
+        -:   12:  virtual void work() const = 0;
+    #####:   13:  virtual ~Employee() = default;
+------------------
+_ZN8EmployeeD0Ev:
+function _ZN8EmployeeD0Ev called 0 returned 0% blocks executed 0%
+    #####:   13:  virtual ~Employee() = default;
+    %%%%%:   13-block  0
+call    0 never executed
+call    1 never executed
+------------------
+_ZN8EmployeeD2Ev:
+function _ZN8EmployeeD2Ev called 0 returned 0% blocks executed 0%
+    #####:   13:  virtual ~Employee() = default;
+    %%%%%:   13-block  0
+call    0 never executed
+------------------
+        -:   14:protected:
+        -:   15:  string arriveTime;
+        -:   16:};
+        -:   17:
+        -:   18:
+        -:   19:
+        -:   20:
+        -:   21:#endif //EMPLOYEE_H

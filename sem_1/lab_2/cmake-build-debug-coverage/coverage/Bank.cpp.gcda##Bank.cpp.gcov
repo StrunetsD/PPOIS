@@ -1,0 +1,45 @@
+        -:    0:Source:/home/dstrunetss/Desktop/PPOIS/sem_1/lab_2/cmake-build-debug/Bank.cpp
+        -:    0:Graph:/home/dstrunetss/Desktop/PPOIS/sem_1/lab_2/cmake-build-debug-coverage/CMakeFiles/lab_2.dir/cmake-build-debug/Bank.cpp.gcno
+        -:    0:Data:/home/dstrunetss/Desktop/PPOIS/sem_1/lab_2/cmake-build-debug-coverage/CMakeFiles/lab_2.dir/cmake-build-debug/Bank.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "Bank.h"
+        -:    2:
+function _ZN4Bank18processTransactionEP11Transaction called 3 returned 100% blocks executed 100%
+        3:    3:void Bank::processTransaction(Transaction* transaction) {
+        3:    4:    transaction->process();
+        3:    4-block  0
+call    0 returned 3
+        3:    5:    transactions_.push_back(transaction);
+call    0 returned 3
+        3:    6:    totalRevenue_ += transaction->getAmount();
+call    0 returned 3
+        3:    7:}
+function _ZNK4Bank15getTotalRevenueEv called 4 returned 100% blocks executed 100%
+        4:    8:double Bank::getTotalRevenue() const {
+        4:    9:  return totalRevenue_;
+        4:    9-block  0
+        -:   10:}
+function _ZNK4Bank16showTransactionsEv called 1 returned 100% blocks executed 100%
+        1:   11:void Bank::showTransactions() const{
+        1:   12:    cout << "All Transactions:" << "\n";
+        1:   12-block  0
+call    0 returned 1
+call    1 returned 1
+        2:   13:    for (const Transaction*  transactions_: transactions_) {
+call    0 returned 1
+call    1 returned 1
+        1:   13-block  0
+call    2 returned 1
+        1:   13-block  1
+call    3 returned 1
+        2:   13-block  2
+call    4 returned 2
+branch  5 taken 1
+branch  6 taken 1 (fallthrough)
+        1:   14:        transactions_->process();
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   15:    }
+        1:   16:}
+        1:   16-block  0

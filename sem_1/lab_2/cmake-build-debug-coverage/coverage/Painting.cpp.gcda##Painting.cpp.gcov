@@ -1,0 +1,119 @@
+        -:    0:Source:/home/dstrunetss/Desktop/PPOIS/sem_1/lab_2/cmake-build-debug/Painting.cpp
+        -:    0:Graph:/home/dstrunetss/Desktop/PPOIS/sem_1/lab_2/cmake-build-debug-coverage/CMakeFiles/lab_2.dir/cmake-build-debug/Painting.cpp.gcno
+        -:    0:Data:/home/dstrunetss/Desktop/PPOIS/sem_1/lab_2/cmake-build-debug-coverage/CMakeFiles/lab_2.dir/cmake-build-debug/Painting.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "Painting.h"
+        -:    2:
+        -:    3:
+function _ZNK8Painting8getTitleB5cxx11Ev called 13 returned 100% blocks executed 100%
+       13:    4:string Painting::getTitle()const{
+       13:    5:  return title_;
+       13:    5-block  0
+call    0 returned 13
+        -:    6:}
+function _ZNK8Painting9getArtistEv called 1 returned 100% blocks executed 100%
+        1:    7:Artist* Painting::getArtist()const{
+        1:    8:  return artist_;
+        1:    8-block  0
+        -:    9:}
+function _ZNK8Painting8getStyleB5cxx11Ev called 7 returned 100% blocks executed 100%
+        7:   10:string Painting::getStyle()const{
+        7:   11:  return style_;
+        7:   11-block  0
+call    0 returned 7
+        -:   12:}
+function _ZNK8Painting8getPriceEv called 7 returned 100% blocks executed 100%
+        7:   13:double Painting::getPrice()const{
+        7:   14:  return price_;
+        7:   14-block  0
+        -:   15:}
+function _ZNK8Painting11getCategoryB5cxx11Ev called 1 returned 100% blocks executed 100%
+        1:   16:string Painting::getCategory() const {
+        1:   17:  return category_->getCategoryName();
+        1:   17-block  0
+call    0 returned 1
+        -:   18:}
+function _ZNK8Painting8showInfoEv called 6 returned 100% blocks executed 71%
+        6:   19:void Painting::showInfo() const {
+        6:   20:  cout<<"Category: "<< category_->getCategoryName()<<"\n";
+        6:   20-block  0
+call    0 returned 6
+call    1 returned 6
+branch  2 taken 6 (fallthrough)
+branch  3 taken 0 (throw)
+        6:   20-block  1
+call    4 returned 6
+branch  5 taken 6 (fallthrough)
+branch  6 taken 0 (throw)
+        6:   20-block  2
+call    7 returned 6
+branch  8 taken 6 (fallthrough)
+branch  9 taken 0 (throw)
+        6:   20-block  3
+call   10 returned 6
+    $$$$$:   20-block  4
+call   11 never executed
+    $$$$$:   20-block  5
+call   12 never executed
+        6:   21:  cout << "Title: " << getTitle() << "\n";
+call    0 returned 6
+call    1 returned 6
+branch  2 taken 6 (fallthrough)
+branch  3 taken 0 (throw)
+        6:   21-block  0
+call    4 returned 6
+branch  5 taken 6 (fallthrough)
+branch  6 taken 0 (throw)
+        6:   21-block  1
+call    7 returned 6
+branch  8 taken 6 (fallthrough)
+branch  9 taken 0 (throw)
+        6:   21-block  2
+call   10 returned 6
+    $$$$$:   21-block  3
+call   11 never executed
+    $$$$$:   21-block  4
+call   12 never executed
+        6:   22:  cout << "Artist: " <<artist_->getName() << "\n";
+call    0 returned 6
+call    1 returned 6
+branch  2 taken 6 (fallthrough)
+branch  3 taken 0 (throw)
+        6:   22-block  0
+call    4 returned 6
+branch  5 taken 6 (fallthrough)
+branch  6 taken 0 (throw)
+        6:   22-block  1
+call    7 returned 6
+branch  8 taken 6 (fallthrough)
+branch  9 taken 0 (throw)
+        6:   22-block  2
+call   10 returned 6
+    $$$$$:   22-block  3
+call   11 never executed
+    $$$$$:   22-block  4
+call   12 never executed
+        6:   23:  cout << "Style: " << getStyle() << "\n";
+call    0 returned 6
+call    1 returned 6
+branch  2 taken 6 (fallthrough)
+branch  3 taken 0 (throw)
+        6:   23-block  0
+call    4 returned 6
+branch  5 taken 6 (fallthrough)
+branch  6 taken 0 (throw)
+        6:   23-block  1
+call    7 returned 6
+branch  8 taken 6 (fallthrough)
+branch  9 taken 0 (throw)
+        6:   23-block  2
+call   10 returned 6
+    $$$$$:   23-block  3
+call   11 never executed
+        6:   24:  cout << "Price: " << getPrice() <<"$"<< "\n";
+call    0 returned 6
+call    1 returned 6
+call    2 returned 6
+call    3 returned 6
+call    4 returned 6
+        6:   25:}

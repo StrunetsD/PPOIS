@@ -1,0 +1,56 @@
+        -:    0:Source:/home/dstrunetss/Desktop/PPOIS/sem_1/lab_2/cmake-build-debug/Event.h
+        -:    0:Graph:/home/dstrunetss/Desktop/PPOIS/sem_1/lab_2/cmake-build-debug-coverage/CMakeFiles/lab_2.dir/Testing/EventTest.cpp.gcno
+        -:    0:Data:/home/dstrunetss/Desktop/PPOIS/sem_1/lab_2/cmake-build-debug-coverage/CMakeFiles/lab_2.dir/Testing/EventTest.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#ifndef EVENT_H
+        -:    2:#define EVENT_H
+        -:    3:#include "libraries.h"
+        -:    4:#include "Entity.h"
+        -:    5:
+        -:    6:#include <string>
+        -:    7:
+        -:    8:class Event final : public Entity {
+        -:    9:public:
+        -:   10:
+function _ZN5EventC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_ called 0 returned 0% blocks executed 0%
+    #####:   11:    Event(const string& name, const string& date)
+    #####:   12:        : id_(generateId()), name_(name), date_(date) {}
+    %%%%%:   12-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed (fallthrough)
+branch  4 never executed (throw)
+    %%%%%:   12-block  1
+call    5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed (throw)
+    %%%%%:   12-block  2
+    $$$$$:   12-block  3
+call    8 never executed
+    $$$$$:   12-block  4
+call    9 never executed
+        -:   13:
+        -:   14:    int getId() const;
+        -:   15:    string getName() const;
+        -:   16:    string getDate() const;
+        -:   17:    void showInfo() const override;
+        -:   18:
+        -:   19:private:
+        -:   20:    int id_;
+        -:   21:    string name_;
+        -:   22:    string date_;
+        -:   23:    static int lastId_;
+function _ZN5Event10generateIdEv called 0 returned 0% blocks executed 0%
+    #####:   24:    static int generateId() {
+    #####:   25:        return ++lastId_;
+    %%%%%:   25-block  0
+        -:   26:    }
+        -:   27:};
+        -:   28:
+        -:   29:
+        -:   30:
+        -:   31:
+        -:   32:
+        -:   33:
+        -:   34:#endif //EVENT_H

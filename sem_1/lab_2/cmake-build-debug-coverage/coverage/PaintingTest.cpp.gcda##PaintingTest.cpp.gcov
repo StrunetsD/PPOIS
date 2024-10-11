@@ -1,0 +1,518 @@
+        -:    0:Source:/home/dstrunetss/Desktop/PPOIS/sem_1/lab_2/Testing/PaintingTest.cpp
+        -:    0:Graph:/home/dstrunetss/Desktop/PPOIS/sem_1/lab_2/cmake-build-debug-coverage/CMakeFiles/lab_2.dir/Testing/PaintingTest.cpp.gcno
+        -:    0:Data:/home/dstrunetss/Desktop/PPOIS/sem_1/lab_2/cmake-build-debug-coverage/CMakeFiles/lab_2.dir/Testing/PaintingTest.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include <gtest/gtest.h>
+        -:    2:#include "../cmake-build-debug/Painting.h"
+        -:    3:#include "../cmake-build-debug/Artist.h"
+        -:    4:#include "../cmake-build-debug/Category.h"
+        -:    5:
+        -:    6:
+        -:    7:class PaintingTest : public ::testing::Test {
+        -:    8:protected:
+        -:    9:        Artist* artist_ = new Artist("Vincent van Gogh","loves art");
+        -:   10:        Category*  category_ = new Category("Post-Impressionism");
+        -:   11:        Painting*   painting_ = new Painting("Starry Night", artist_, "Oil on canvass", 1000000.0, category_);
+        -:   12:};
+        -:   13:
+        -:   14:
+        4:   15:TEST_F(PaintingTest, GetTitle) {
+       1*:   16:    EXPECT_EQ(painting_->getTitle(), "Starry Night");
+        1:   17:}
+------------------
+_ZN26PaintingTest_GetTitle_TestC2Ev:
+function _ZN26PaintingTest_GetTitle_TestC2Ev called 1 returned 100% blocks executed 100%
+        1:   15:TEST_F(PaintingTest, GetTitle) {
+        1:   15-block  0
+call    0 returned 1
+------------------
+_ZN26PaintingTest_GetTitle_TestD0Ev:
+function _ZN26PaintingTest_GetTitle_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:   15:TEST_F(PaintingTest, GetTitle) {
+        1:   15-block  0
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN26PaintingTest_GetTitle_TestD2Ev:
+function _ZN26PaintingTest_GetTitle_TestD2Ev called 1 returned 100% blocks executed 100%
+        1:   15:TEST_F(PaintingTest, GetTitle) {
+        1:   15-block  0
+call    0 returned 1
+------------------
+_ZN26PaintingTest_GetTitle_Test8TestBodyEv:
+function _ZN26PaintingTest_GetTitle_Test8TestBodyEv called 1 returned 100% blocks executed 31%
+        1:   15:TEST_F(PaintingTest, GetTitle) {
+       1*:   16:    EXPECT_EQ(painting_->getTitle(), "Starry Night");
+        1:   16-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   16-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   16-block  2
+call    6 returned 1
+call    7 returned 1
+branch  8 taken 0 (fallthrough)
+branch  9 taken 1
+    %%%%%:   16-block  3
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:   16-block  4
+call   13 never executed
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
+    %%%%%:   16-block  5
+call   17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed (throw)
+    %%%%%:   16-block  6
+call   20 never executed
+call   21 never executed
+        1:   16-block  7
+call   22 returned 1
+    $$$$$:   16-block  8
+call   23 never executed
+    $$$$$:   16-block  9
+    $$$$$:   16-block 10
+call   24 never executed
+    $$$$$:   16-block 11
+    $$$$$:   16-block 12
+call   25 never executed
+    $$$$$:   16-block 13
+    $$$$$:   16-block 14
+call   26 never executed
+        1:   17:}
+------------------
+        -:   18:
+        -:   19:
+        4:   20:TEST_F(PaintingTest, GetArtist) {
+       1*:   21:    EXPECT_EQ(painting_->getArtist()->getName(), "Vincent van Gogh");
+        1:   22:}
+------------------
+_ZN27PaintingTest_GetArtist_TestC2Ev:
+function _ZN27PaintingTest_GetArtist_TestC2Ev called 1 returned 100% blocks executed 100%
+        1:   20:TEST_F(PaintingTest, GetArtist) {
+        1:   20-block  0
+call    0 returned 1
+------------------
+_ZN27PaintingTest_GetArtist_TestD0Ev:
+function _ZN27PaintingTest_GetArtist_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:   20:TEST_F(PaintingTest, GetArtist) {
+        1:   20-block  0
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN27PaintingTest_GetArtist_TestD2Ev:
+function _ZN27PaintingTest_GetArtist_TestD2Ev called 1 returned 100% blocks executed 100%
+        1:   20:TEST_F(PaintingTest, GetArtist) {
+        1:   20-block  0
+call    0 returned 1
+------------------
+_ZN27PaintingTest_GetArtist_Test8TestBodyEv:
+function _ZN27PaintingTest_GetArtist_Test8TestBodyEv called 1 returned 100% blocks executed 33%
+        1:   20:TEST_F(PaintingTest, GetArtist) {
+       1*:   21:    EXPECT_EQ(painting_->getArtist()->getName(), "Vincent van Gogh");
+        1:   21-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   21-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   21-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   21-block  3
+call    9 returned 1
+call   10 returned 1
+branch 11 taken 0 (fallthrough)
+branch 12 taken 1
+    %%%%%:   21-block  4
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:   21-block  5
+call   16 never executed
+call   17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed (throw)
+    %%%%%:   21-block  6
+call   20 never executed
+branch 21 never executed (fallthrough)
+branch 22 never executed (throw)
+    %%%%%:   21-block  7
+call   23 never executed
+call   24 never executed
+        1:   21-block  8
+call   25 returned 1
+    $$$$$:   21-block  9
+call   26 never executed
+    $$$$$:   21-block 10
+    $$$$$:   21-block 11
+call   27 never executed
+    $$$$$:   21-block 12
+    $$$$$:   21-block 13
+call   28 never executed
+    $$$$$:   21-block 14
+    $$$$$:   21-block 15
+call   29 never executed
+        1:   22:}
+------------------
+        -:   23:
+        -:   24:
+        4:   25:TEST_F(PaintingTest, GetStyle) {
+       1*:   26:    EXPECT_EQ(painting_->getStyle(), "Oil on canvass");
+        1:   27:}
+------------------
+_ZN26PaintingTest_GetStyle_TestC2Ev:
+function _ZN26PaintingTest_GetStyle_TestC2Ev called 1 returned 100% blocks executed 100%
+        1:   25:TEST_F(PaintingTest, GetStyle) {
+        1:   25-block  0
+call    0 returned 1
+------------------
+_ZN26PaintingTest_GetStyle_TestD0Ev:
+function _ZN26PaintingTest_GetStyle_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:   25:TEST_F(PaintingTest, GetStyle) {
+        1:   25-block  0
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN26PaintingTest_GetStyle_TestD2Ev:
+function _ZN26PaintingTest_GetStyle_TestD2Ev called 1 returned 100% blocks executed 100%
+        1:   25:TEST_F(PaintingTest, GetStyle) {
+        1:   25-block  0
+call    0 returned 1
+------------------
+_ZN26PaintingTest_GetStyle_Test8TestBodyEv:
+function _ZN26PaintingTest_GetStyle_Test8TestBodyEv called 1 returned 100% blocks executed 31%
+        1:   25:TEST_F(PaintingTest, GetStyle) {
+       1*:   26:    EXPECT_EQ(painting_->getStyle(), "Oil on canvass");
+        1:   26-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   26-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   26-block  2
+call    6 returned 1
+call    7 returned 1
+branch  8 taken 0 (fallthrough)
+branch  9 taken 1
+    %%%%%:   26-block  3
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:   26-block  4
+call   13 never executed
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
+    %%%%%:   26-block  5
+call   17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed (throw)
+    %%%%%:   26-block  6
+call   20 never executed
+call   21 never executed
+        1:   26-block  7
+call   22 returned 1
+    $$$$$:   26-block  8
+call   23 never executed
+    $$$$$:   26-block  9
+    $$$$$:   26-block 10
+call   24 never executed
+    $$$$$:   26-block 11
+    $$$$$:   26-block 12
+call   25 never executed
+    $$$$$:   26-block 13
+    $$$$$:   26-block 14
+call   26 never executed
+        1:   27:}
+------------------
+        -:   28:
+        -:   29:
+        4:   30:TEST_F(PaintingTest, GetPrice) {
+       1*:   31:    EXPECT_DOUBLE_EQ(painting_->getPrice(), 1000000.0);
+        1:   32:}
+------------------
+_ZN26PaintingTest_GetPrice_TestC2Ev:
+function _ZN26PaintingTest_GetPrice_TestC2Ev called 1 returned 100% blocks executed 100%
+        1:   30:TEST_F(PaintingTest, GetPrice) {
+        1:   30-block  0
+call    0 returned 1
+------------------
+_ZN26PaintingTest_GetPrice_TestD0Ev:
+function _ZN26PaintingTest_GetPrice_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:   30:TEST_F(PaintingTest, GetPrice) {
+        1:   30-block  0
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN26PaintingTest_GetPrice_TestD2Ev:
+function _ZN26PaintingTest_GetPrice_TestD2Ev called 1 returned 100% blocks executed 100%
+        1:   30:TEST_F(PaintingTest, GetPrice) {
+        1:   30-block  0
+call    0 returned 1
+------------------
+_ZN26PaintingTest_GetPrice_Test8TestBodyEv:
+function _ZN26PaintingTest_GetPrice_Test8TestBodyEv called 1 returned 100% blocks executed 32%
+        1:   30:TEST_F(PaintingTest, GetPrice) {
+       1*:   31:    EXPECT_DOUBLE_EQ(painting_->getPrice(), 1000000.0);
+        1:   31-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   31-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   31-block  2
+call    6 returned 1
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:   31-block  3
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%:   31-block  4
+call   12 never executed
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:   31-block  5
+call   16 never executed
+branch 17 never executed (fallthrough)
+branch 18 never executed (throw)
+    %%%%%:   31-block  6
+call   19 never executed
+call   20 never executed
+        1:   31-block  7
+call   21 returned 1
+    $$$$$:   31-block  8
+call   22 never executed
+    $$$$$:   31-block  9
+    $$$$$:   31-block 10
+call   23 never executed
+    $$$$$:   31-block 11
+    $$$$$:   31-block 12
+call   24 never executed
+        1:   32:}
+------------------
+        -:   33:
+        -:   34:
+        4:   35:TEST_F(PaintingTest, GetCategory) {
+       1*:   36:    EXPECT_EQ(painting_->getCategory(), "Post-Impressionism");
+        1:   37:}
+------------------
+_ZN29PaintingTest_GetCategory_TestC2Ev:
+function _ZN29PaintingTest_GetCategory_TestC2Ev called 1 returned 100% blocks executed 100%
+        1:   35:TEST_F(PaintingTest, GetCategory) {
+        1:   35-block  0
+call    0 returned 1
+------------------
+_ZN29PaintingTest_GetCategory_TestD0Ev:
+function _ZN29PaintingTest_GetCategory_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:   35:TEST_F(PaintingTest, GetCategory) {
+        1:   35-block  0
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN29PaintingTest_GetCategory_TestD2Ev:
+function _ZN29PaintingTest_GetCategory_TestD2Ev called 1 returned 100% blocks executed 100%
+        1:   35:TEST_F(PaintingTest, GetCategory) {
+        1:   35-block  0
+call    0 returned 1
+------------------
+_ZN29PaintingTest_GetCategory_Test8TestBodyEv:
+function _ZN29PaintingTest_GetCategory_Test8TestBodyEv called 1 returned 100% blocks executed 31%
+        1:   35:TEST_F(PaintingTest, GetCategory) {
+       1*:   36:    EXPECT_EQ(painting_->getCategory(), "Post-Impressionism");
+        1:   36-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   36-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   36-block  2
+call    6 returned 1
+call    7 returned 1
+branch  8 taken 0 (fallthrough)
+branch  9 taken 1
+    %%%%%:   36-block  3
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:   36-block  4
+call   13 never executed
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
+    %%%%%:   36-block  5
+call   17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed (throw)
+    %%%%%:   36-block  6
+call   20 never executed
+call   21 never executed
+        1:   36-block  7
+call   22 returned 1
+    $$$$$:   36-block  8
+call   23 never executed
+    $$$$$:   36-block  9
+    $$$$$:   36-block 10
+call   24 never executed
+    $$$$$:   36-block 11
+    $$$$$:   36-block 12
+call   25 never executed
+    $$$$$:   36-block 13
+    $$$$$:   36-block 14
+call   26 never executed
+        1:   37:}
+------------------
+        -:   38:
+        -:   39:
+        4:   40:TEST_F(PaintingTest, ShowInfo) {
+       1*:   41:    EXPECT_NO_THROW(painting_->showInfo());
+        1:   42:}
+------------------
+_ZN26PaintingTest_ShowInfo_TestC2Ev:
+function _ZN26PaintingTest_ShowInfo_TestC2Ev called 1 returned 100% blocks executed 100%
+        1:   40:TEST_F(PaintingTest, ShowInfo) {
+        1:   40-block  0
+call    0 returned 1
+------------------
+_ZN26PaintingTest_ShowInfo_TestD0Ev:
+function _ZN26PaintingTest_ShowInfo_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:   40:TEST_F(PaintingTest, ShowInfo) {
+        1:   40-block  0
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN26PaintingTest_ShowInfo_TestD2Ev:
+function _ZN26PaintingTest_ShowInfo_TestD2Ev called 1 returned 100% blocks executed 100%
+        1:   40:TEST_F(PaintingTest, ShowInfo) {
+        1:   40-block  0
+call    0 returned 1
+------------------
+_ZN26PaintingTest_ShowInfo_Test8TestBodyEv:
+function _ZN26PaintingTest_ShowInfo_Test8TestBodyEv called 1 returned 100% blocks executed 17%
+        1:   40:TEST_F(PaintingTest, ShowInfo) {
+       1*:   41:    EXPECT_NO_THROW(painting_->showInfo());
+        1:   41-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0
+        1:   41-block  1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   41-block  2
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0
+        1:   41-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+    %%%%%:   41-block  4
+call   12 never executed
+branch 13 never executed (fallthrough)
+branch 14 never executed (throw)
+    %%%%%:   41-block  5
+call   15 never executed
+branch 16 never executed (fallthrough)
+branch 17 never executed (throw)
+    %%%%%:   41-block  6
+call   18 never executed
+call   19 never executed
+branch 20 never executed (fallthrough)
+branch 21 never executed (throw)
+    %%%%%:   41-block  7
+call   22 never executed
+branch 23 never executed (fallthrough)
+branch 24 never executed (throw)
+    %%%%%:   41-block  8
+call   25 never executed
+call   26 never executed
+call   27 never executed
+        1:   41-block  9
+call   28 returned 1
+    $$$$$:   41-block 10
+branch 29 never executed
+branch 30 never executed
+    $$$$$:   41-block 11
+call   31 never executed
+call   32 never executed
+branch 33 never executed (fallthrough)
+branch 34 never executed (throw)
+    $$$$$:   41-block 12
+call   35 never executed
+branch 36 never executed (fallthrough)
+branch 37 never executed (throw)
+    $$$$$:   41-block 13
+call   38 never executed
+branch 39 never executed (fallthrough)
+branch 40 never executed (throw)
+    $$$$$:   41-block 14
+call   41 never executed
+call   42 never executed
+branch 43 never executed (fallthrough)
+branch 44 never executed (throw)
+    $$$$$:   41-block 15
+call   45 never executed
+call   46 never executed
+branch 47 never executed (fallthrough)
+branch 48 never executed (throw)
+    $$$$$:   41-block 16
+call   49 never executed
+branch 50 never executed (fallthrough)
+branch 51 never executed (throw)
+    $$$$$:   41-block 17
+    $$$$$:   41-block 18
+call   52 never executed
+    $$$$$:   41-block 19
+call   53 never executed
+call   54 never executed
+branch 55 never executed (fallthrough)
+branch 56 never executed (throw)
+    $$$$$:   41-block 20
+    $$$$$:   41-block 21
+call   57 never executed
+branch 58 never executed (fallthrough)
+branch 59 never executed (throw)
+    $$$$$:   41-block 22
+call   60 never executed
+    $$$$$:   41-block 23
+    $$$$$:   41-block 24
+call   61 never executed
+    $$$$$:   41-block 25
+call   62 never executed
+    $$$$$:   41-block 26
+call   63 never executed
+    $$$$$:   41-block 27
+call   64 never executed
+    $$$$$:   41-block 28
+    $$$$$:   41-block 29
+    $$$$$:   41-block 30
+call   65 never executed
+    $$$$$:   41-block 31
+    $$$$$:   41-block 32
+call   66 never executed
+        1:   42:}
+------------------
+        -:   43:
+        -:   44:
+        -:   45:
+        -:   46:
+        -:   47:
+        -:   48:

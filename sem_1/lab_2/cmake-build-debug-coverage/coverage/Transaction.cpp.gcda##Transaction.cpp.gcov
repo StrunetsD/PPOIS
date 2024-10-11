@@ -1,0 +1,63 @@
+        -:    0:Source:/home/dstrunetss/Desktop/PPOIS/sem_1/lab_2/cmake-build-debug/Transaction.cpp
+        -:    0:Graph:/home/dstrunetss/Desktop/PPOIS/sem_1/lab_2/cmake-build-debug-coverage/CMakeFiles/lab_2.dir/cmake-build-debug/Transaction.cpp.gcno
+        -:    0:Data:/home/dstrunetss/Desktop/PPOIS/sem_1/lab_2/cmake-build-debug-coverage/CMakeFiles/lab_2.dir/cmake-build-debug/Transaction.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "Transaction.h"
+        -:    2:
+        -:    3:
+function _ZNK11Transaction7processEv called 5 returned 100% blocks executed 74%
+        5:    4:  void Transaction::process() const {
+    #####:    5:      cout << "Processing transaction: " << client_->getName()
+    $$$$$:    5-block  0
+call    0 never executed
+        5:    6:                << " bought " << painting_->getTitle()
+        5:    6-block  0
+call    0 returned 5
+call    1 returned 5
+    $$$$$:    6-block  1
+call    2 never executed
+    $$$$$:    6-block  2
+        5:    7:                << " for " << amount_ << " $." << "\n";
+        5:    7-block  0
+call    0 returned 5
+call    1 returned 5
+branch  2 taken 5 (fallthrough)
+branch  3 taken 0 (throw)
+        5:    7-block  1
+call    4 returned 5
+branch  5 taken 5 (fallthrough)
+branch  6 taken 0 (throw)
+        5:    7-block  2
+call    7 returned 5
+branch  8 taken 5 (fallthrough)
+branch  9 taken 0 (throw)
+        5:    7-block  3
+call   10 returned 5
+branch 11 taken 5 (fallthrough)
+branch 12 taken 0 (throw)
+        5:    7-block  4
+call   13 returned 5
+branch 14 taken 5 (fallthrough)
+branch 15 taken 0 (throw)
+        5:    7-block  5
+call   16 returned 5
+branch 17 taken 5 (fallthrough)
+branch 18 taken 0 (throw)
+        5:    7-block  6
+call   19 returned 5
+branch 20 taken 5 (fallthrough)
+branch 21 taken 0 (throw)
+        5:    7-block  7
+call   22 returned 5
+branch 23 taken 5 (fallthrough)
+branch 24 taken 0 (throw)
+        5:    7-block  8
+call   25 returned 5
+branch 26 taken 5 (fallthrough)
+branch 27 taken 0 (throw)
+        5:    8:  }
+function _ZNK11Transaction9getAmountEv called 4 returned 100% blocks executed 100%
+        4:    9:  double Transaction::getAmount() const {
+        4:   10:      return amount_;
+        4:   10-block  0
+        -:   11:  }

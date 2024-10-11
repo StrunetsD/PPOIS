@@ -1,0 +1,25 @@
+        -:    0:Source:/home/dstrunetss/Desktop/PPOIS/sem_1/lab_2/cmake-build-debug/Bank.h
+        -:    0:Graph:/home/dstrunetss/Desktop/PPOIS/sem_1/lab_2/cmake-build-debug-coverage/CMakeFiles/lab_2.dir/cmake-build-debug/main.cpp.gcno
+        -:    0:Data:/home/dstrunetss/Desktop/PPOIS/sem_1/lab_2/cmake-build-debug-coverage/CMakeFiles/lab_2.dir/cmake-build-debug/main.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#ifndef BANK_H
+        -:    2:#define BANK_H
+        -:    3:#include "libraries.h"
+        -:    4:#include "Transaction.h"
+        -:    5:class Bank {
+        -:    6:public:
+function _ZN4BankC2Ev called 4 returned 100% blocks executed 100%
+        4:    7:  Bank():totalRevenue_(20.0){};
+        4:    7-block  0
+call    0 returned 4
+        -:    8:  void processTransaction(Transaction* transaction);
+        -:    9:  double getTotalRevenue() const;
+        -:   10:  void showTransactions() const;
+        -:   11:private:
+        -:   12:    vector<Transaction*> transactions_;
+        -:   13:    double totalRevenue_;
+        -:   14:};
+        -:   15:
+        -:   16:
+        -:   17:
+        -:   18:#endif //BANK_H

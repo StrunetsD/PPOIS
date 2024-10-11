@@ -1,0 +1,51 @@
+        -:    0:Source:/home/dstrunetss/Desktop/PPOIS/sem_1/lab_2/cmake-build-debug/Security.h
+        -:    0:Graph:/home/dstrunetss/Desktop/PPOIS/sem_1/lab_2/cmake-build-debug-coverage/CMakeFiles/lab_2.dir/Testing/WorkersTest.cpp.gcno
+        -:    0:Data:/home/dstrunetss/Desktop/PPOIS/sem_1/lab_2/cmake-build-debug-coverage/CMakeFiles/lab_2.dir/Testing/WorkersTest.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#ifndef SECURITY_H
+        -:    2:#define SECURITY_H
+        -:    3:
+        -:    4:#include "libraries.h"
+        -:    5:#include "Employee.h"
+        -:    6:#include "Human.h"
+        -:    7:
+        -:    8:
+        -:    9:class Security final :public Employee, public Human {
+        -:   10:public:
+function _ZN8SecurityC2ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES5_ called 0 returned 0% blocks executed 0%
+    #####:   11:    Security(const string name, const string arriveTime)
+    #####:   12:        : Human(name), Employee(arriveTime) {}
+    %%%%%:   12-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   12-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    %%%%%:   12-block  2
+call    6 never executed
+call    7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed (throw)
+    %%%%%:   12-block  3
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:   12-block  4
+call   13 never executed
+    $$$$$:   12-block  5
+call   14 never executed
+    $$$$$:   12-block  6
+call   15 never executed
+    $$$$$:   12-block  7
+call   16 never executed
+    $$$$$:   12-block  8
+    $$$$$:   12-block  9
+call   17 never executed
+        -:   13:    void work() const override;
+        -:   14:};
+        -:   15:
+        -:   16:
+        -:   17:
+        -:   18:#endif //SECURITY_H

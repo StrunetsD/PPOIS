@@ -1,0 +1,231 @@
+        -:    0:Source:/home/dstrunetss/Desktop/PPOIS/sem_1/lab_2/cmake-build-debug/Workers.cpp
+        -:    0:Graph:/home/dstrunetss/Desktop/PPOIS/sem_1/lab_2/cmake-build-debug-coverage/CMakeFiles/lab_2.dir/cmake-build-debug/Workers.cpp.gcno
+        -:    0:Data:/home/dstrunetss/Desktop/PPOIS/sem_1/lab_2/cmake-build-debug-coverage/CMakeFiles/lab_2.dir/cmake-build-debug/Workers.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "includes.h"
+        -:    2:#include "libraries.h"
+        -:    3:
+        -:    4:
+        -:    5:
+        -:    6:
+function _ZN7Workers16addAdministratorEP13Administrator called 3 returned 100% blocks executed 100%
+        3:    7:void Workers::addAdministrator(Administrator* adm)  {
+        3:    8:    admins_.push_back(adm);
+        3:    8-block  0
+call    0 returned 3
+        3:    9:}
+        -:   10:
+        -:   11:
+function _ZN7Workers19removeAdministratorEP13Administrator called 1 returned 100% blocks executed 90%
+        1:   12:void Workers::removeAdministrator(Administrator* adm)  {
+        1:   13:    if (const auto it = ranges::find(admins_, adm); it != admins_.end()) {
+        1:   13-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   13-block  1
+call    3 returned 1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0
+        1:   14:        admins_.erase(it);
+        1:   14-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   14-block  1
+    $$$$$:   14-block  2
+        -:   15:    }
+        1:   16:}
+        1:   16-block  0
+        -:   17:
+        -:   18:
+function _ZN7Workers10addCuratorEP7Curator called 3 returned 100% blocks executed 100%
+        3:   19:void Workers::addCurator(Curator* cur)  {
+        3:   20:    curators_.push_back(cur);
+        3:   20-block  0
+call    0 returned 3
+        3:   21:}
+        -:   22:
+        -:   23:
+function _ZN7Workers13removeCuratorEP7Curator called 1 returned 100% blocks executed 90%
+        1:   24:void Workers::removeCurator(Curator* cur)  {
+        1:   25:    if (const auto it = ranges::find(curators_, cur); it != curators_.end()) {
+        1:   25-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   25-block  1
+call    3 returned 1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0
+        1:   26:        curators_.erase(it);
+        1:   26-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   26-block  1
+    $$$$$:   26-block  2
+        -:   27:    }
+        1:   28:}
+        1:   28-block  0
+        -:   29:
+        -:   30:
+function _ZN7Workers11addSecurityEP8Security called 3 returned 100% blocks executed 100%
+        3:   31:void Workers::addSecurity(Security* sec) {
+        3:   32:    security_.push_back(sec);
+        3:   32-block  0
+call    0 returned 3
+        3:   33:}
+        -:   34:
+        -:   35:
+function _ZN7Workers14removeSecurityEP8Security called 1 returned 100% blocks executed 90%
+        1:   36:void Workers::removeSecurity(Security* sec)  {
+        1:   37:    if (const auto it = ranges::find(security_, sec); it != security_.end()) {
+        1:   37-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   37-block  1
+call    3 returned 1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0
+        1:   38:        security_.erase(it);
+        1:   38-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   38-block  1
+    $$$$$:   38-block  2
+        -:   39:    }
+        1:   40:}
+        1:   40-block  0
+        -:   41:
+        -:   42:
+function _ZNK7Workers18showAdministratorsEv called 4 returned 100% blocks executed 82%
+        4:   43:void Workers::showAdministrators() const {
+        4:   44:    cout << "Administrators" << "\n";
+        4:   44-block  0
+call    0 returned 4
+call    1 returned 4
+        7:   45:    for (const auto& adm : admins_) {
+call    0 returned 4
+call    1 returned 4
+        3:   45-block  0
+call    2 returned 3
+        7:   45-block  1
+call    3 returned 7
+branch  4 taken 3
+branch  5 taken 4 (fallthrough)
+        3:   46:        cout << adm->getName() << "\n";
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+        3:   46-block  0
+call    3 returned 3
+branch  4 taken 3 (fallthrough)
+branch  5 taken 0 (throw)
+        3:   46-block  1
+call    6 returned 3
+branch  7 taken 3 (fallthrough)
+branch  8 taken 0 (throw)
+        3:   46-block  2
+call    9 returned 3
+call   10 returned 3
+    $$$$$:   46-block  3
+call   11 never executed
+    $$$$$:   46-block  4
+        -:   47:    }
+        4:   48:}
+        4:   48-block  0
+        -:   49:
+        -:   50:
+function _ZNK7Workers12showCuratorsEv called 4 returned 100% blocks executed 82%
+        4:   51:void Workers::showCurators() const {
+        4:   52:   cout << "Curators:" << "\n";
+        4:   52-block  0
+call    0 returned 4
+call    1 returned 4
+        7:   53:    for (const auto& cur : curators_) {
+call    0 returned 4
+call    1 returned 4
+        3:   53-block  0
+call    2 returned 3
+        7:   53-block  1
+call    3 returned 7
+branch  4 taken 3
+branch  5 taken 4 (fallthrough)
+        3:   54:        cout << cur->getName() << "\n";
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+        3:   54-block  0
+call    3 returned 3
+branch  4 taken 3 (fallthrough)
+branch  5 taken 0 (throw)
+        3:   54-block  1
+call    6 returned 3
+branch  7 taken 3 (fallthrough)
+branch  8 taken 0 (throw)
+        3:   54-block  2
+call    9 returned 3
+call   10 returned 3
+    $$$$$:   54-block  3
+call   11 never executed
+    $$$$$:   54-block  4
+        -:   55:    }
+        4:   56:}
+        4:   56-block  0
+        -:   57:
+        -:   58:
+function _ZNK7Workers12showSecurityEv called 4 returned 100% blocks executed 82%
+        4:   59:void Workers::showSecurity() const {
+        4:   60:    cout << "Security:" << "\n";
+        4:   60-block  0
+call    0 returned 4
+call    1 returned 4
+        7:   61:    for (const auto& sec : security_) {
+call    0 returned 4
+call    1 returned 4
+        3:   61-block  0
+call    2 returned 3
+        7:   61-block  1
+call    3 returned 7
+branch  4 taken 3
+branch  5 taken 4 (fallthrough)
+        3:   62:        cout << sec->getName() << "\n";
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+        3:   62-block  0
+call    3 returned 3
+branch  4 taken 3 (fallthrough)
+branch  5 taken 0 (throw)
+        3:   62-block  1
+call    6 returned 3
+branch  7 taken 3 (fallthrough)
+branch  8 taken 0 (throw)
+        3:   62-block  2
+call    9 returned 3
+call   10 returned 3
+    $$$$$:   62-block  3
+call   11 never executed
+    $$$$$:   62-block  4
+        -:   63:    }
+        4:   64:}
+        4:   64-block  0
+function _ZNK7Workers8showInfoEv called 1 returned 100% blocks executed 100%
+        1:   65:void Workers::showInfo() const {
+        1:   66:    showAdministrators();
+        1:   66-block  0
+call    0 returned 1
+        1:   67:    showCurators();
+call    0 returned 1
+        1:   68:    showSecurity();
+call    0 returned 1
+        1:   69:}

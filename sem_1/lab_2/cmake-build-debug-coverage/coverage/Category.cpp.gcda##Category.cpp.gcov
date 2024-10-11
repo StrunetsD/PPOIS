@@ -1,0 +1,12 @@
+        -:    0:Source:/home/dstrunetss/Desktop/PPOIS/sem_1/lab_2/cmake-build-debug/Category.cpp
+        -:    0:Graph:/home/dstrunetss/Desktop/PPOIS/sem_1/lab_2/cmake-build-debug-coverage/CMakeFiles/lab_2.dir/cmake-build-debug/Category.cpp.gcno
+        -:    0:Data:/home/dstrunetss/Desktop/PPOIS/sem_1/lab_2/cmake-build-debug-coverage/CMakeFiles/lab_2.dir/cmake-build-debug/Category.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "Category.h"
+        -:    2:
+function _ZNK8Category15getCategoryNameB5cxx11Ev called 9 returned 100% blocks executed 100%
+        9:    3:string Category::getCategoryName() const {
+        9:    4:  return categoryName_;
+        9:    4-block  0
+call    0 returned 9
+        -:    5:}

@@ -1,0 +1,51 @@
+        -:    0:Source:/home/dstrunetss/Desktop/PPOIS/sem_1/lab_2/cmake-build-debug/Curator.h
+        -:    0:Graph:/home/dstrunetss/Desktop/PPOIS/sem_1/lab_2/cmake-build-debug-coverage/CMakeFiles/lab_2.dir/cmake-build-debug/main.cpp.gcno
+        -:    0:Data:/home/dstrunetss/Desktop/PPOIS/sem_1/lab_2/cmake-build-debug-coverage/CMakeFiles/lab_2.dir/cmake-build-debug/main.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#ifndef CURATOR_H
+        -:    2:#define CURATOR_H
+        -:    3:#include "libraries.h"
+        -:    4:#include "Employee.h"
+        -:    5:#include "Human.h"
+        -:    6:
+        -:    7:
+        -:    8:class Curator final : public Human, public Employee {
+        -:    9:public:
+function _ZN7CuratorC2ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES5_ called 6 returned 100% blocks executed 53%
+        6:   10:  Curator(const string name, const string arriveTime)
+        6:   11:        : Human(name), Employee(arriveTime) {}
+        6:   11-block  0
+call    0 returned 6
+branch  1 taken 6 (fallthrough)
+branch  2 taken 0 (throw)
+        6:   11-block  1
+call    3 returned 6
+branch  4 taken 6 (fallthrough)
+branch  5 taken 0 (throw)
+        6:   11-block  2
+call    6 returned 6
+call    7 returned 6
+branch  8 taken 6 (fallthrough)
+branch  9 taken 0 (throw)
+        6:   11-block  3
+call   10 returned 6
+branch 11 taken 6 (fallthrough)
+branch 12 taken 0 (throw)
+        6:   11-block  4
+call   13 returned 6
+    $$$$$:   11-block  5
+call   14 never executed
+    $$$$$:   11-block  6
+call   15 never executed
+    $$$$$:   11-block  7
+call   16 never executed
+    $$$$$:   11-block  8
+    $$$$$:   11-block  9
+call   17 never executed
+        -:   12:  void work() const override;
+        -:   13:
+        -:   14:};
+        -:   15:
+        -:   16:
+        -:   17:
+        -:   18:#endif //CURATOR_H

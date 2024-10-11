@@ -1,0 +1,31 @@
+        -:    0:Source:/home/dstrunetss/Desktop/PPOIS/sem_1/lab_2/cmake-build-debug/Tour.h
+        -:    0:Graph:/home/dstrunetss/Desktop/PPOIS/sem_1/lab_2/cmake-build-debug-coverage/CMakeFiles/lab_2.dir/cmake-build-debug/Guide.cpp.gcno
+        -:    0:Data:/home/dstrunetss/Desktop/PPOIS/sem_1/lab_2/cmake-build-debug-coverage/CMakeFiles/lab_2.dir/cmake-build-debug/Guide.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#ifndef TOUR_H
+        -:    2:#define TOUR_H
+        -:    3:
+        -:    4:#include "libraries.h"
+        -:    5:
+        -:    6:class Tour {
+        -:    7:public:
+        -:    8:    Tour(const string& name, const string& dateTime)
+        -:    9:        : name_(name), dateTime_(dateTime) {}
+        -:   10:
+function _ZNK4Tour7getNameB5cxx11Ev called 0 returned 0% blocks executed 0%
+    #####:   11:    string getName() const { return name_; }
+    %%%%%:   11-block  0
+call    0 never executed
+function _ZNK4Tour11getDateTimeB5cxx11Ev called 0 returned 0% blocks executed 0%
+    #####:   12:    string getDateTime() const { return dateTime_; }
+    %%%%%:   12-block  0
+call    0 never executed
+        -:   13:
+        -:   14:private:
+        -:   15:    string name_;
+        -:   16:    string dateTime_;
+        -:   17:};
+        -:   18:
+        -:   19:
+        -:   20:
+        -:   21:#endif //TOUR_H

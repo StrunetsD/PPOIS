@@ -1,0 +1,64 @@
+        -:    0:Source:/home/dstrunetss/Desktop/PPOIS/sem_1/lab_2/cmake-build-debug/Review.h
+        -:    0:Graph:/home/dstrunetss/Desktop/PPOIS/sem_1/lab_2/cmake-build-debug-coverage/CMakeFiles/lab_2.dir/Testing/ArtGalleryTest.cpp.gcno
+        -:    0:Data:/home/dstrunetss/Desktop/PPOIS/sem_1/lab_2/cmake-build-debug-coverage/CMakeFiles/lab_2.dir/Testing/ArtGalleryTest.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#ifndef REVIEW_H
+        -:    2:#define REVIEW_H
+        -:    3:#include "libraries.h"
+        -:    4:#include "Client.h"
+        -:    5:#include "Entity.h"
+        -:    6:
+        -:    7:class Review final : public Entity{
+        -:    8:public:
+function _ZN6ReviewC2EP6ClientRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKi called 0 returned 0% blocks executed 0%
+    #####:    9:    Review(Client* clientName, const string& content, const int& rating)
+    #####:   10:        : clientName_(clientName), content_(content), rating_(rating), date_(getCurrentDate()) {
+    %%%%%:   10-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed (throw)
+    %%%%%:   10-block  1
+call    4 never executed
+branch  5 never executed (fallthrough)
+branch  6 never executed (throw)
+    #####:   11:        if (rating < 1 || rating > 5) {
+    %%%%%:   11-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    %%%%%:   11-block  1
+branch  2 never executed (fallthrough)
+branch  3 never executed
+    #####:   12:            throw invalid_argument("Rating must be between 1 and 5.");
+    %%%%%:   12-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed (throw)
+    %%%%%:   12-block  1
+call    4 never executed
+    $$$$$:   12-block  2
+call    5 never executed
+        -:   13:        }
+    #####:   14:    }
+    %%%%%:   14-block  0
+    $$$$$:   14-block  1
+call    0 never executed
+    $$$$$:   14-block  2
+call    1 never executed
+    $$$$$:   14-block  3
+call    2 never executed
+        -:   15:    void showInfo() const override;
+        -:   16:    string getClientName() const;
+        -:   17:    string getContent() const;
+        -:   18:    int getRating() const;
+        -:   19:    string getDate() const;
+        -:   20:private:
+        -:   21:    Client* clientName_;
+        -:   22:    string content_;
+        -:   23:    int rating_;
+        -:   24:    string date_;
+        -:   25:protected:
+        -:   26:    static string getCurrentDate();
+        -:   27:};
+        -:   28:#endif //REVIEW_H

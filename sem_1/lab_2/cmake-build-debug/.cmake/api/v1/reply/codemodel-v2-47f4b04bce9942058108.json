@@ -1,0 +1,186 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.29"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "lab_2",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "AdministratorTest::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-AdministratorTest-Debug-93a90819661305f63f93.json",
+					"name" : "AdministratorTest",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ArtGalleryTest::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ArtGalleryTest-Debug-18cd73e8883799cece4d.json",
+					"name" : "ArtGalleryTest",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ArtistTest::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ArtistTest-Debug-4d0bb08e8e1e0b099df1.json",
+					"name" : "ArtistTest",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "BankTest::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-BankTest-Debug-cff1e3e10b9a4f1d5f6f.json",
+					"name" : "BankTest",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "CategoryTest::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-CategoryTest-Debug-a33974d3a5e359944660.json",
+					"name" : "CategoryTest",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ClientTest::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ClientTest-Debug-acc90bf34d6134fa8b36.json",
+					"name" : "ClientTest",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "CuratorTest::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-CuratorTest-Debug-6dfee32245ad9c8d9908.json",
+					"name" : "CuratorTest",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "EventTest::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-EventTest-Debug-cee1130a5e4ce1dfb9d3.json",
+					"name" : "EventTest",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "GuideTest::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-GuideTest-Debug-77c9d35cba1f9f4a3a53.json",
+					"name" : "GuideTest",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "PaintingTest::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-PaintingTest-Debug-f817024fe7eb20974bbb.json",
+					"name" : "PaintingTest",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ReviewTest::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ReviewTest-Debug-49d626eab6b363905c35.json",
+					"name" : "ReviewTest",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "SecurityTest::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-SecurityTest-Debug-1f13906385dde426df7a.json",
+					"name" : "SecurityTest",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "TransactionTest::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-TransactionTest-Debug-22083882d8873c20e58a.json",
+					"name" : "TransactionTest",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "WorkersTest::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-WorkersTest-Debug-3d9f391c14627c29263d.json",
+					"name" : "WorkersTest",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "lab_2::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-lab_2-Debug-6c7f9ed168c060a74884.json",
+					"name" : "lab_2",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/dstrunetss/Desktop/PPOIS/sem_1/lab_2/cmake-build-debug",
+		"source" : "/home/dstrunetss/Desktop/PPOIS/sem_1/lab_2"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

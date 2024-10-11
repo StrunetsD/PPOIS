@@ -1,0 +1,140 @@
+        -:    0:Source:/home/dstrunetss/Desktop/PPOIS/sem_1/lab_2/cmake-build-debug/Review.cpp
+        -:    0:Graph:/home/dstrunetss/Desktop/PPOIS/sem_1/lab_2/cmake-build-debug-coverage/CMakeFiles/lab_2.dir/cmake-build-debug/Review.cpp.gcno
+        -:    0:Data:/home/dstrunetss/Desktop/PPOIS/sem_1/lab_2/cmake-build-debug-coverage/CMakeFiles/lab_2.dir/cmake-build-debug/Review.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "Review.h"
+        -:    2:
+function _ZNK6Review8showInfoEv called 4 returned 100% blocks executed 73%
+        4:    3:void Review::showInfo() const {
+        4:    4:    cout << "Review by: " << getClientName() << "\n";
+        4:    4-block  0
+call    0 returned 4
+call    1 returned 4
+branch  2 taken 4 (fallthrough)
+branch  3 taken 0 (throw)
+        4:    4-block  1
+call    4 returned 4
+branch  5 taken 4 (fallthrough)
+branch  6 taken 0 (throw)
+        4:    4-block  2
+call    7 returned 4
+branch  8 taken 4 (fallthrough)
+branch  9 taken 0 (throw)
+        4:    4-block  3
+call   10 returned 4
+    $$$$$:    4-block  4
+call   11 never executed
+    $$$$$:    4-block  5
+call   12 never executed
+        4:    5:    cout << "Rating: " << getRating() << "/5" << "\n";
+call    0 returned 4
+call    1 returned 4
+call    2 returned 4
+call    3 returned 4
+call    4 returned 4
+        4:    6:    cout << "Date: " << getDate() << "\n";
+call    0 returned 4
+call    1 returned 4
+branch  2 taken 4 (fallthrough)
+branch  3 taken 0 (throw)
+        4:    6-block  0
+call    4 returned 4
+branch  5 taken 4 (fallthrough)
+branch  6 taken 0 (throw)
+        4:    6-block  1
+call    7 returned 4
+branch  8 taken 4 (fallthrough)
+branch  9 taken 0 (throw)
+        4:    6-block  2
+call   10 returned 4
+    $$$$$:    6-block  3
+call   11 never executed
+    $$$$$:    6-block  4
+call   12 never executed
+        4:    7:    cout << "Comment: " << getContent()<< "\n";
+call    0 returned 4
+call    1 returned 4
+branch  2 taken 4 (fallthrough)
+branch  3 taken 0 (throw)
+        4:    7-block  0
+call    4 returned 4
+branch  5 taken 4 (fallthrough)
+branch  6 taken 0 (throw)
+        4:    7-block  1
+call    7 returned 4
+branch  8 taken 4 (fallthrough)
+branch  9 taken 0 (throw)
+        4:    7-block  2
+call   10 returned 4
+    $$$$$:    7-block  3
+call   11 never executed
+        4:    8:}
+function _ZNK6Review13getClientNameB5cxx11Ev called 5 returned 100% blocks executed 100%
+        5:    9:string Review::getClientName() const {
+        5:   10:  return clientName_->getName();
+        5:   10-block  0
+call    0 returned 5
+        -:   11:}
+function _ZNK6Review10getContentB5cxx11Ev called 7 returned 100% blocks executed 100%
+        7:   12:string Review::getContent() const {
+        7:   13:    return content_;
+        7:   13-block  0
+call    0 returned 7
+        -:   14:}
+function _ZNK6Review9getRatingEv called 5 returned 100% blocks executed 100%
+        5:   15:int Review::getRating() const {
+        5:   16:  return rating_;
+        5:   16-block  0
+        -:   17:}
+function _ZNK6Review7getDateB5cxx11Ev called 4 returned 100% blocks executed 100%
+        4:   18:string Review::getDate() const {
+        4:   19:  return date_;
+        4:   19-block  0
+call    0 returned 4
+        -:   20:}
+function _ZN6Review14getCurrentDateB5cxx11Ev called 18 returned 100% blocks executed 49%
+       18:   21:string Review::getCurrentDate() {
+       18:   22:    const time_t now = time(nullptr);
+       18:   22-block  0
+call    0 returned 18
+       18:   23:    struct tm timeinfo{};
+        -:   24:
+        -:   25:
+       18:   26:    if (localtime_r(&now, &timeinfo) == nullptr) {
+call    0 returned 18
+branch  1 taken 0 (fallthrough)
+branch  2 taken 18
+    #####:   27:        return "";
+    %%%%%:   27-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   27-block  1
+    $$$$$:   27-block  2
+        -:   28:    }
+        -:   29:
+        -:   30:
+       18:   31:    std::array<char, 80> buffer{};
+       18:   31-block  0
+       36:   32:    if (strftime(buffer.data(), buffer.size(), "%Y-%m-%d", &timeinfo) == 0) {
+       18:   32-block  0
+       18:   32-block  1
+branch  0 taken 0 (fallthrough)
+branch  1 taken 18
+    #####:   33:        return "";
+    %%%%%:   33-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   33-block  1
+    $$$$$:   33-block  2
+        -:   34:    }
+        -:   35:
+       36:   36:    return string(buffer.data());
+       18:   36-block  0
+call    0 returned 18
+branch  1 taken 18 (fallthrough)
+branch  2 taken 0 (throw)
+       18:   36-block  1
+    $$$$$:   36-block  2
+        -:   37:}

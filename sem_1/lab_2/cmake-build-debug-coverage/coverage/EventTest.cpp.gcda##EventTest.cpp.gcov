@@ -1,0 +1,391 @@
+        -:    0:Source:/home/dstrunetss/Desktop/PPOIS/sem_1/lab_2/Testing/EventTest.cpp
+        -:    0:Graph:/home/dstrunetss/Desktop/PPOIS/sem_1/lab_2/cmake-build-debug-coverage/CMakeFiles/lab_2.dir/Testing/EventTest.cpp.gcno
+        -:    0:Data:/home/dstrunetss/Desktop/PPOIS/sem_1/lab_2/cmake-build-debug-coverage/CMakeFiles/lab_2.dir/Testing/EventTest.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "../cmake-build-debug/Event.h"
+        -:    2:#include "gtest/gtest.h"
+        -:    3:
+        -:    4:class EventTest : public ::testing::Test {
+        -:    5:protected:
+        -:    6:    Event* event= new Event("Birthday Party","2023-12-01");
+        -:    7:};
+        -:    8:
+        4:    9:TEST_F(EventTest, GetName) {
+       1*:   10:    EXPECT_EQ(event->getName(), "Birthday Party");
+        1:   11:}
+------------------
+_ZN22EventTest_GetName_TestC2Ev:
+function _ZN22EventTest_GetName_TestC2Ev called 1 returned 100% blocks executed 100%
+        1:    9:TEST_F(EventTest, GetName) {
+        1:    9-block  0
+call    0 returned 1
+------------------
+_ZN22EventTest_GetName_TestD0Ev:
+function _ZN22EventTest_GetName_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:    9:TEST_F(EventTest, GetName) {
+        1:    9-block  0
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN22EventTest_GetName_TestD2Ev:
+function _ZN22EventTest_GetName_TestD2Ev called 1 returned 100% blocks executed 100%
+        1:    9:TEST_F(EventTest, GetName) {
+        1:    9-block  0
+call    0 returned 1
+------------------
+_ZN22EventTest_GetName_Test8TestBodyEv:
+function _ZN22EventTest_GetName_Test8TestBodyEv called 1 returned 100% blocks executed 31%
+        1:    9:TEST_F(EventTest, GetName) {
+       1*:   10:    EXPECT_EQ(event->getName(), "Birthday Party");
+        1:   10-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   10-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   10-block  2
+call    6 returned 1
+call    7 returned 1
+branch  8 taken 0 (fallthrough)
+branch  9 taken 1
+    %%%%%:   10-block  3
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:   10-block  4
+call   13 never executed
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
+    %%%%%:   10-block  5
+call   17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed (throw)
+    %%%%%:   10-block  6
+call   20 never executed
+call   21 never executed
+        1:   10-block  7
+call   22 returned 1
+    $$$$$:   10-block  8
+call   23 never executed
+    $$$$$:   10-block  9
+    $$$$$:   10-block 10
+call   24 never executed
+    $$$$$:   10-block 11
+    $$$$$:   10-block 12
+call   25 never executed
+    $$$$$:   10-block 13
+    $$$$$:   10-block 14
+call   26 never executed
+        1:   11:}
+------------------
+        -:   12:
+        4:   13:TEST_F(EventTest, GetDate) {
+       1*:   14:    EXPECT_EQ(event->getDate(), "2023-12-01");
+        1:   15:}
+------------------
+_ZN22EventTest_GetDate_TestC2Ev:
+function _ZN22EventTest_GetDate_TestC2Ev called 1 returned 100% blocks executed 100%
+        1:   13:TEST_F(EventTest, GetDate) {
+        1:   13-block  0
+call    0 returned 1
+------------------
+_ZN22EventTest_GetDate_TestD0Ev:
+function _ZN22EventTest_GetDate_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:   13:TEST_F(EventTest, GetDate) {
+        1:   13-block  0
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN22EventTest_GetDate_TestD2Ev:
+function _ZN22EventTest_GetDate_TestD2Ev called 1 returned 100% blocks executed 100%
+        1:   13:TEST_F(EventTest, GetDate) {
+        1:   13-block  0
+call    0 returned 1
+------------------
+_ZN22EventTest_GetDate_Test8TestBodyEv:
+function _ZN22EventTest_GetDate_Test8TestBodyEv called 1 returned 100% blocks executed 31%
+        1:   13:TEST_F(EventTest, GetDate) {
+       1*:   14:    EXPECT_EQ(event->getDate(), "2023-12-01");
+        1:   14-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   14-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   14-block  2
+call    6 returned 1
+call    7 returned 1
+branch  8 taken 0 (fallthrough)
+branch  9 taken 1
+    %%%%%:   14-block  3
+call   10 never executed
+branch 11 never executed (fallthrough)
+branch 12 never executed (throw)
+    %%%%%:   14-block  4
+call   13 never executed
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
+    %%%%%:   14-block  5
+call   17 never executed
+branch 18 never executed (fallthrough)
+branch 19 never executed (throw)
+    %%%%%:   14-block  6
+call   20 never executed
+call   21 never executed
+        1:   14-block  7
+call   22 returned 1
+    $$$$$:   14-block  8
+call   23 never executed
+    $$$$$:   14-block  9
+    $$$$$:   14-block 10
+call   24 never executed
+    $$$$$:   14-block 11
+    $$$$$:   14-block 12
+call   25 never executed
+    $$$$$:   14-block 13
+    $$$$$:   14-block 14
+call   26 never executed
+        1:   15:}
+------------------
+        -:   16:
+        -:   17:
+        4:   18:TEST_F(EventTest, GetId) {
+        -:   19:
+       1*:   20:    EXPECT_GT(event->getId(), 0);
+        1:   21:}
+------------------
+_ZN20EventTest_GetId_TestC2Ev:
+function _ZN20EventTest_GetId_TestC2Ev called 1 returned 100% blocks executed 100%
+        1:   18:TEST_F(EventTest, GetId) {
+        1:   18-block  0
+call    0 returned 1
+------------------
+_ZN20EventTest_GetId_TestD0Ev:
+function _ZN20EventTest_GetId_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:   18:TEST_F(EventTest, GetId) {
+        1:   18-block  0
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN20EventTest_GetId_TestD2Ev:
+function _ZN20EventTest_GetId_TestD2Ev called 1 returned 100% blocks executed 100%
+        1:   18:TEST_F(EventTest, GetId) {
+        1:   18-block  0
+call    0 returned 1
+------------------
+_ZN20EventTest_GetId_Test8TestBodyEv:
+function _ZN20EventTest_GetId_Test8TestBodyEv called 1 returned 100% blocks executed 29%
+        1:   18:TEST_F(EventTest, GetId) {
+        -:   19:
+       1*:   20:    EXPECT_GT(event->getId(), 0);
+        1:   20-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   20-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   20-block  2
+call    6 returned 1
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:   20-block  3
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%:   20-block  4
+call   12 never executed
+call   13 never executed
+branch 14 never executed (fallthrough)
+branch 15 never executed (throw)
+    %%%%%:   20-block  5
+call   16 never executed
+branch 17 never executed (fallthrough)
+branch 18 never executed (throw)
+    %%%%%:   20-block  6
+call   19 never executed
+call   20 never executed
+        1:   20-block  7
+call   21 returned 1
+    $$$$$:   20-block  8
+    $$$$$:   20-block  9
+    $$$$$:   20-block 10
+call   22 never executed
+    $$$$$:   20-block 11
+    $$$$$:   20-block 12
+call   23 never executed
+    $$$$$:   20-block 13
+    $$$$$:   20-block 14
+call   24 never executed
+        1:   21:}
+------------------
+        -:   22:
+        4:   23:TEST_F(EventTest, ShowInfo) {
+        1:   24:    testing::internal::CaptureStdout();
+        1:   25:    event->showInfo();
+        1:   26:    std::string output = testing::internal::GetCapturedStdout();
+        -:   27:
+       1*:   28:    EXPECT_NE(output.find("name: Birthday Party"), string::npos);
+       1*:   29:    EXPECT_NE(output.find("date:  2023-12-01"), string::npos);
+       1*:   30:    EXPECT_NE(output.find("id:  "), string::npos);
+        1:   31:}
+------------------
+_ZN23EventTest_ShowInfo_TestC2Ev:
+function _ZN23EventTest_ShowInfo_TestC2Ev called 1 returned 100% blocks executed 100%
+        1:   23:TEST_F(EventTest, ShowInfo) {
+        1:   23-block  0
+call    0 returned 1
+------------------
+_ZN23EventTest_ShowInfo_TestD0Ev:
+function _ZN23EventTest_ShowInfo_TestD0Ev called 1 returned 100% blocks executed 100%
+        1:   23:TEST_F(EventTest, ShowInfo) {
+        1:   23-block  0
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZN23EventTest_ShowInfo_TestD2Ev:
+function _ZN23EventTest_ShowInfo_TestD2Ev called 1 returned 100% blocks executed 100%
+        1:   23:TEST_F(EventTest, ShowInfo) {
+        1:   23-block  0
+call    0 returned 1
+------------------
+_ZN23EventTest_ShowInfo_Test8TestBodyEv:
+function _ZN23EventTest_ShowInfo_Test8TestBodyEv called 1 returned 100% blocks executed 28%
+        1:   23:TEST_F(EventTest, ShowInfo) {
+        1:   24:    testing::internal::CaptureStdout();
+        1:   24-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   25:    event->showInfo();
+        1:   25-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   26:    std::string output = testing::internal::GetCapturedStdout();
+        1:   26-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   27:
+       1*:   28:    EXPECT_NE(output.find("name: Birthday Party"), string::npos);
+        1:   28-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   28-block  1
+call    4 returned 1
+branch  5 taken 0 (fallthrough)
+branch  6 taken 1
+    %%%%%:   28-block  2
+call    7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed (throw)
+    %%%%%:   28-block  3
+call   10 never executed
+call   11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed (throw)
+    %%%%%:   28-block  4
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
+    %%%%%:   28-block  5
+call   17 never executed
+call   18 never executed
+        1:   28-block  6
+call   19 returned 1
+    $$$$$:   28-block  7
+    $$$$$:   28-block  8
+call   20 never executed
+    $$$$$:   28-block  9
+    $$$$$:   28-block 10
+call   21 never executed
+    $$$$$:   28-block 11
+    $$$$$:   28-block 12
+call   22 never executed
+       1*:   29:    EXPECT_NE(output.find("date:  2023-12-01"), string::npos);
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   29-block  0
+call    4 returned 1
+branch  5 taken 0 (fallthrough)
+branch  6 taken 1
+    %%%%%:   29-block  1
+call    7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed (throw)
+    %%%%%:   29-block  2
+call   10 never executed
+call   11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed (throw)
+    %%%%%:   29-block  3
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
+    %%%%%:   29-block  4
+call   17 never executed
+call   18 never executed
+        1:   29-block  5
+call   19 returned 1
+    $$$$$:   29-block  6
+    $$$$$:   29-block  7
+call   20 never executed
+    $$$$$:   29-block  8
+    $$$$$:   29-block  9
+call   21 never executed
+    $$$$$:   29-block 10
+    $$$$$:   29-block 11
+call   22 never executed
+       1*:   30:    EXPECT_NE(output.find("id:  "), string::npos);
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   30-block  0
+call    4 returned 1
+branch  5 taken 0 (fallthrough)
+branch  6 taken 1
+    %%%%%:   30-block  1
+call    7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed (throw)
+    %%%%%:   30-block  2
+call   10 never executed
+call   11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed (throw)
+    %%%%%:   30-block  3
+call   14 never executed
+branch 15 never executed (fallthrough)
+branch 16 never executed (throw)
+    %%%%%:   30-block  4
+call   17 never executed
+call   18 never executed
+        1:   30-block  5
+call   19 returned 1
+    $$$$$:   30-block  6
+    $$$$$:   30-block  7
+call   20 never executed
+    $$$$$:   30-block  8
+    $$$$$:   30-block  9
+call   21 never executed
+    $$$$$:   30-block 10
+    $$$$$:   30-block 11
+call   22 never executed
+        1:   31:}
+call    0 returned 1
+    $$$$$:   31-block  0
+call    1 never executed
+------------------

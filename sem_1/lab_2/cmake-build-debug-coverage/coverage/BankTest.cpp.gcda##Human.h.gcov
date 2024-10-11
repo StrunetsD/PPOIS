@@ -1,0 +1,37 @@
+        -:    0:Source:/home/dstrunetss/Desktop/PPOIS/sem_1/lab_2/cmake-build-debug/Human.h
+        -:    0:Graph:/home/dstrunetss/Desktop/PPOIS/sem_1/lab_2/cmake-build-debug-coverage/CMakeFiles/lab_2.dir/Testing/BankTest.cpp.gcno
+        -:    0:Data:/home/dstrunetss/Desktop/PPOIS/sem_1/lab_2/cmake-build-debug-coverage/CMakeFiles/lab_2.dir/Testing/BankTest.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#ifndef HUMAN_H
+        -:    2:#define HUMAN_H
+        -:    3:#include "libraries.h"
+        -:    4:class Human  {
+        -:    5:protected:
+        -:    6:    string name;
+        -:    7:
+        -:    8:public:
+function _ZN5HumanC2ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 0 returned 0% blocks executed 0%
+    #####:    9:    explicit Human(const string name) : name(name) {}
+    %%%%%:    9-block  0
+call    0 never executed
+        -:   10:
+        -:   11:    string getName() const {
+        -:   12:        return name;
+        -:   13:    }
+    #####:   14:    virtual ~Human() = default;
+------------------
+_ZN5HumanD0Ev:
+function _ZN5HumanD0Ev called 0 returned 0% blocks executed 0%
+    #####:   14:    virtual ~Human() = default;
+    %%%%%:   14-block  0
+call    0 never executed
+call    1 never executed
+------------------
+_ZN5HumanD2Ev:
+function _ZN5HumanD2Ev called 0 returned 0% blocks executed 0%
+    #####:   14:    virtual ~Human() = default;
+    %%%%%:   14-block  0
+call    0 never executed
+------------------
+        -:   15:};
+        -:   16:#endif //HUMAN_H
