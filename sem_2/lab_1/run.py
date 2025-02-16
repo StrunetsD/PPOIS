@@ -148,7 +148,7 @@ class Courier(User):
         print(f"Order #{order.order_id} delivered")
 
 
-class Kitchener(User):
+class Chef(User):
     def __init__(self):
         super().__init__(User.Role.KITCHENER)
         self._toppings: List[Topping] = []
@@ -185,32 +185,72 @@ class ConsoleApp:
     def __init__(self):
         self.pizzeria = Pizzeria()
         self.clients = []
-        self.kitcheners = []
+        self.chefs = []
         self.couriers = []
         self.current_order = None
-        self.load_data()  # Загружаем данные при запуске
+        self.load_data()
 
     def save_data(self):
-        data = {
+        try:
+            with open("data.json", "r") as f:
+                existing_data = json.load(f)
+        except FileNotFoundError:
+            existing_data = {
+                "clients": [],
+                "chefs": [],
+                "couriers": [],
+                "orders": [],
+                "finances": {"income": 0.0, "expenses": 0.0},
+                "last_order_id": 0
+            }
+
+        new_data = {
             "clients": [{"name": client.name, "address": client._address, "phone": client._phone_num} for client in
                         self.clients],
+            "chefs": [{"name": chef.name} for chef in self.chefs],
+            "couriers": [{"name": courier.name, "transport": courier._transport} for courier in self.couriers],
             "orders": [{"order_id": order.order_id, "client": order.client.name, "items": order.items,
                         "status": order.status.value} for order in self.pizzeria._orders.values()],
-            "finances": {"income": self.pizzeria._accounting._income, "expenses": self.pizzeria._accounting._expenses}
+            "finances": {"income": self.pizzeria._accounting._income, "expenses": self.pizzeria._accounting._expenses},
+            "last_order_id": self.pizzeria._next_order_id - 1
         }
+
+        for key in new_data:
+            if key in existing_data:
+                if isinstance(existing_data[key], list):
+                    existing_items = {json.dumps(item, sort_keys=True) for item in existing_data[key]}
+                    new_items = [item for item in new_data[key] if
+                                 json.dumps(item, sort_keys=True) not in existing_items]
+                    existing_data[key].extend(new_items)
+                elif isinstance(existing_data[key], dict):
+                    existing_data[key].update(new_data[key])
+            else:
+                existing_data[key] = new_data[key]
+
         with open("data.json", "w") as f:
-            json.dump(data, f, indent=4)
+            json.dump(existing_data, f, indent=4)
         print("Данные сохранены!")
 
     def load_data(self):
         try:
             with open("data.json", "r") as f:
                 data = json.load(f)
+
                 for client_data in data["clients"]:
                     client = Client(client_data["address"])
                     client.name = client_data["name"]
                     client._phone_num = client_data["phone"]
                     self.clients.append(client)
+
+                for chef_data in data["chefs"]:
+                    chef = Chef()
+                    chef.name = chef_data["name"]
+                    self.chefs.append(chef)
+
+                for courier_data in data["couriers"]:
+                    courier = Courier()
+                    courier.name = courier_data["name"]
+                    self.couriers.append(courier)
 
                 for order_data in data["orders"]:
                     client = next((c for c in self.clients if c.name == order_data["client"]), None)
@@ -221,6 +261,7 @@ class ConsoleApp:
 
                 self.pizzeria._accounting._income = data["finances"]["income"]
                 self.pizzeria._accounting._expenses = data["finances"]["expenses"]
+                self.pizzeria._next_order_id = data.get("last_order_id", 0) + 1
 
             print("Данные загружены!")
         except FileNotFoundError:
@@ -269,15 +310,15 @@ class ConsoleApp:
         client.name = name
         client._phone_num = phone
         self.clients.append(client)
-        self.save_data()  # Сохраняем данные после создания клиента
+        self.save_data()
         print(f"Клиент {name} создан")
 
     def create_kitchener(self):
         name = input("Имя повара: ")
-        kitchener = Kitchener()
+        kitchener = Chef()
         kitchener.name = name
-        self.kitcheners.append(kitchener)
-        self.save_data()  # Сохраняем данные после создания повара
+        self.chefs.append(kitchener)
+        self.save_data()
         print(f"Повар {name} создан")
 
     def create_courier(self):
@@ -287,7 +328,7 @@ class ConsoleApp:
         courier.name = name
         courier._transport = transport
         self.couriers.append(courier)
-        self.save_data()  # Сохраняем данные после создания курьера
+        self.save_data()
         print(f"Курьер {name} создан")
 
     def create_order(self):
@@ -307,7 +348,7 @@ class ConsoleApp:
 
         self.current_order = self.pizzeria.accept_order(client, items)
         client.create_order(self.current_order)
-        self.save_data()  # Сохраняем данные после создания заказа
+        self.save_data()
         print(f"Заказ #{self.current_order.order_id} создан")
 
     def prepare_pizza(self):
@@ -315,7 +356,7 @@ class ConsoleApp:
             print("Нет активного заказа!")
             return
 
-        kitchener = self.kitcheners[0] if self.kitcheners else None
+        kitchener = self.chefs[0] if self.chefs else None
         if not kitchener:
             print("Нет доступных поваров!")
             return
@@ -340,7 +381,7 @@ class ConsoleApp:
             return
 
         courier.deliver_order(self.current_order)
-        self.save_data()  # Сохраняем данные после доставки заказа
+        self.save_data()
         print(f"Заказ #{self.current_order.order_id} доставлен")
 
     def show_finance(self):
