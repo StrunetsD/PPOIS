@@ -110,7 +110,7 @@
   - `show_finance()`: Показывает текущую прибыль.
   
 ### Диаграмма классов
-![img.png](img.png)
+![classes.png](diagrams/classes.png)
 
 ### Диаграмма состояний
-![img_1.png](img_1.png)
+![order_state_diagram.png](diagrams/order_state_diagram.png)
