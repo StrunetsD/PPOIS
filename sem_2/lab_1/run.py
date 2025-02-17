@@ -169,6 +169,22 @@ class Pizzeria:
         self._next_order_id = 1
 
     def accept_order(self, client: Client, items: List[str]):
+        items = []
+        while True:
+            print("Меню:", ", ".join(self._menu.keys()))
+            item = input("Введите название пиццы (или 'done' для завершения): ")
+
+            if item.lower() == 'done':
+                if not items:
+                    print("Вы не выбрали ни одной пиццы. Пожалуйста, выберите хотя бы одну.")
+                    continue
+                break
+
+            if item not in self._menu:
+                print(f"Ошибка: '{item}' не в меню. Пожалуйста, выберите другую пиццу.")
+            else:
+                items.append(item)
+
         order = Order(self._next_order_id, client, items)
         order.price = sum(self._menu[item] for item in items)
         self._orders[order.order_id] = order
