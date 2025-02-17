@@ -1,88 +1,69 @@
-from run import *
-from io import StringIO
-from unittest.mock import patch
 import unittest
+from run import *
 
-class TestPizzeriaApp(unittest.TestCase):
 
+class TestPizzeria(unittest.TestCase):
     def setUp(self):
-        self.app = ConsoleApp()
-        self.app.clients = []
-        self.app.chefs = []
-        self.app.couriers = []
-        self.app.pizzeria._next_order_id = 1
+        self.pizzeria = Pizzeria()
+        self.client = Client("123 Main St")
+        self.client.name = "John Doe"
+        self.pizzeria.menu = {
+            "Margherita": 500,
+            "Pepperoni": 600
+        }
 
-    def test_create_client(self):
-        with patch('sys.stdout', new=StringIO()) as fake_out:
-            with patch('builtins.input', side_effect=["Dima", "Minsk", "80297744702"]):
-                self.app.create_client()
-            self.assertIn("Клиент Dima создан", fake_out.getvalue())
-            self.assertEqual(len(self.app.clients), 1)
-            self.assertEqual(self.app.clients[0].name, "Dima")
+    def test_order_state_transition(self):
+        order = Order(1, self.client, ["Margherita"])
+        self.assertIsInstance(order.state, NewOrder)
 
-    def test_create_chef(self):
-        with patch('sys.stdout', new=StringIO()) as fake_out:
-            with patch('builtins.input', side_effect=["Chef John"]):
-                self.app.create_kitchener()
-            self.assertIn("Повар Chef John создан", fake_out.getvalue())
-            self.assertEqual(len(self.app.chefs), 1)
-            self.assertEqual(self.app.chefs[0].name, "Chef John")
+        order.prepare()
+        self.assertIsInstance(order.state, CookingOrder)
 
-    def test_create_courier(self):
-        with patch('sys.stdout', new=StringIO()) as fake_out:
-            with patch('builtins.input', side_effect=["Courier Alex", "Bike"]):
-                self.app.create_courier()
-            self.assertIn("Курьер Courier Alex создан", fake_out.getvalue())
-            self.assertEqual(len(self.app.couriers), 1)
-            self.assertEqual(self.app.couriers[0].name, "Courier Alex")
-            self.assertEqual(self.app.couriers[0]._transport, "Bike")
+        order.deliver()
+        self.assertIsInstance(order.state, DeliveringOrder)
 
-    def test_create_order(self):
-        with patch('builtins.input', side_effect=["Dima", "Minsk", "80297744702"]):
-            self.app.create_client()
-        with patch('builtins.input', side_effect=["1", "Margherita"]):
-            self.app.create_order()
-        self.assertEqual(len(self.app.pizzeria._orders), 2)
-        self.assertEqual(self.app.pizzeria._orders[1].client.name, "Dima")
+        order.complete()
+        self.assertIsInstance(order.state, CompletedOrder)
 
-    def test_prepare_pizza(self):
-        with patch('builtins.input', side_effect=["Dima", "Minsk", "80297744702"]):
-            self.app.create_client()
-        with patch('builtins.input', side_effect=["1", "Margherita"]):
-            self.app.create_order()
-        with patch('builtins.input', side_effect=["Chef John"]):
-            self.app.create_kitchener()
+    def test_dough_creation(self):
+        dough = Dough(Dough.TypeOfDough.THIN)
+        self.assertEqual(dough.dough_type, Dough.TypeOfDough.THIN)
 
-        with patch('sys.stdout', new=StringIO()) as fake_out:
-            self.app.prepare_pizza()
-            self.assertIn("Пицца приготовлена:", fake_out.getvalue())
+    def test_topping_creation(self):
+        topping = Topping("Cheese")
+        self.assertEqual(topping.name, "Cheese")
 
-    def test_deliver_order(self):
-        with patch('builtins.input', side_effect=["Dima", "Minsk", "80297744702"]):
-            self.app.create_client()
-        with patch('builtins.input', side_effect=["1", "Margherita"]):
-            self.app.create_order()
-        with patch('builtins.input', side_effect=["Courier Alex", "Bike"]):
-            self.app.create_courier()
-        with patch('builtins.input', side_effect=["Chef John"]):
-            self.app.create_kitchener()
-        self.app.prepare_pizza()
+    def test_pizza_creation(self):
+        toppings = [Topping("Cheese"), Topping("Tomato")]
+        dough = Dough(Dough.TypeOfDough.THIN)
+        bake = Bake(200)
+        pizza = Pizza(toppings, dough, bake, "Margherita", 500)
 
-        with patch('sys.stdout', new=StringIO()) as fake_out:
-            self.app.deliver_order()
-            self.assertIn("Заказ #1 доставлен", fake_out.getvalue())
-            self.assertEqual(self.app.current_order.status, Order.Status.COMPLETED)
+        self.assertEqual(pizza._name_to_pizza, "Margherita")
+        self.assertEqual(len(pizza.toppings), 2)
+        self.assertEqual(pizza.dough.dough_type, Dough.TypeOfDough.THIN)
 
-    def test_show_finance(self):
-        with patch('builtins.input', side_effect=["Dima", "Minsk", "80297744702"]):
-            self.app.create_client()
-        with patch('builtins.input', side_effect=["1", "Margherita"]):
-            self.app.create_order()
-        self.app.pizzeria._accounting.add_income(12.99)
-        with patch('sys.stdout', new=StringIO()) as fake_out:
-            self.app.show_finance()
-            self.assertIn("Текущая прибыль:", fake_out.getvalue())
+    def test_accounting_income(self):
+        accounting = self.pizzeria.accounting
+        accounting.add_income(1000)
+        self.assertEqual(accounting.income, 1000)
+
+    def test_client_create_order(self):
+        order = Order(1, self.client, ["Margherita"])
+        self.client.create_order(order)
+        self.assertIn(order, self.client._orders)
+
+    def test_courier_deliver_order(self):
+        order = Order(1, self.client, ["Margherita"])
+        order.prepare()
+        order.deliver()
+
+        courier = Courier()
+        courier.deliver_order(order)
+
+        self.assertIsInstance(order.state, DeliveringOrder)
 
 
+# Запуск тестов
 if __name__ == "__main__":
     unittest.main()
