@@ -1,0 +1,30 @@
+@startuml
+
+[*] --> NewOrder : Заказ создан
+
+state NewOrder {
+    [*] --> Принят : Заказ принят
+    Принят --> Готовится : Повар начинает готовить
+}
+
+state CookingOrder {
+    [*] --> Готовится : Пицца готовится
+    Готовится --> ГотовКДоставке : Пицца приготовлена
+}
+
+state DeliveringOrder {
+    [*] --> ГотовКДоставке : Курьер принимает заказ
+    ГотовКДоставке --> Доставлен : Заказ доставлен
+}
+
+state CompletedOrder {
+    [*] --> Доставлен : Заказ завершен
+}
+
+NewOrder --> CookingOrder : prepare()
+CookingOrder --> DeliveringOrder : deliver()
+DeliveringOrder --> CompletedOrder : complete()
+
+CompletedOrder --> [*] : Заказ завершен
+
+@enduml
