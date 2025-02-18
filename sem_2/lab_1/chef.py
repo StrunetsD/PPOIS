@@ -40,7 +40,7 @@ class Chef(User):
         self._bake = value
 
     def prepare_pizza(self, order: Order) -> Pizza:
-        if not isinstance(order.state, NewOrder):
+        if not isinstance(order.state, NewOrder): ## check кортеж
             raise ValueError("Заказ не в состоянии для приготовления")
 
         if not self.dough or not self.toppings or not self.bake:

@@ -1,6 +1,6 @@
 from datetime import datetime
 from typing import List
-from client import Client
+
 
 class OrderState:
     def prepare(self, order: 'Order') -> 'OrderState':

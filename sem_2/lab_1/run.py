@@ -184,10 +184,20 @@ class ConsoleApp:
         for i, client in enumerate(self.clients, 1):
             print(f"{i}. {client.name}")
 
-        client_idx: int = int(input("Выберите клиента: ")) - 1
-        if client_idx < 0 or client_idx >= len(self.clients):
-            print("Неверный выбор клиента!")
-            return
+        while True:
+            choice: str = input("Выберите клиента (введите номер): ")
+
+            # Проверяем, что введены только цифры
+            if choice.isdigit():
+                client_idx: int = int(choice) - 1
+
+                # Проверяем, что индекс находится в допустимых пределах
+                if 0 <= client_idx < len(self.clients):
+                    break
+                else:
+                    print(f"Ошибка: введите число от 1 до {len(self.clients)}")
+            else:
+                print("Ошибка: введите только цифры.")
 
         client: Client = self.clients[client_idx]
 
