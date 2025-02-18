@@ -112,5 +112,3 @@
 ### Диаграмма классов
 ![classes.png](diagrams/classes.png)
 
-### Диаграмма состояний
-![order_state_diagram.png](diagrams/order_state_diagram.png)
